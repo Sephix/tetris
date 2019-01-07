@@ -7,6 +7,38 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+div p {
+  text-align: center;
+  padding: 0;
+  margin: 2px;
+  height: 21px;
+}
+
+div b {
+  border: 1px solid black;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin-right: 1px;
+  display: inline-block;
+}
+
+div .board {
+  padding-top: 100px;
+  position: center;
+  -webkit-user-select: none;
+  height: 600px;
+}
+
+.white {
+  background-color: white;
+}
+
+.black {
+  background-color: slategrey;
+  outline: 1px solid white;
+  outline-offset: -3px;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
