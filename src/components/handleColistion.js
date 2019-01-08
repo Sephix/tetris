@@ -6,7 +6,7 @@ import FindCellHeight from "./findCellHeight";
 function HandleCollision(grid, cell, y, x) {
 
     let testing = false;
-    let cellHeight = (cell !== 0) ? FindCellHeight(cell) : 0;
+    let cellHeight = (cell !== 0 ) ? FindCellHeight(cell) : 0;
 
     if(y > 0){
         if(y > (18-cellHeight)){

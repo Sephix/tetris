@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import GenerateNewCell from "./generateNewCell";
 import HandleCollision from "./handleColistion";
+import HandleMove from "./handleMove";
 
 class Grid extends Component {
     constructor(props) {
