@@ -6,10 +6,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7a01008e-22e1-410b-8848-b41eece0d5e7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/handleMove.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/handleColistion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/handleColistion.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,8 +23,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/grid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="721">
-              <caret line="94" column="19" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+            <state relative-caret-position="399">
+              <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="124" selection-end-column="13" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -37,8 +35,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/handleColistion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+            <state relative-caret-position="230">
+              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -55,8 +53,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/generateNewCell.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="276">
-              <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+            <state relative-caret-position="138">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -89,11 +87,11 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/components/GenerateNewCell.js" />
-        <option value="$PROJECT_DIR$/src/components/generateNewCell.js" />
         <option value="$PROJECT_DIR$/src/components/findCellHeight.js" />
         <option value="$PROJECT_DIR$/src/components/handleMove.js" />
-        <option value="$PROJECT_DIR$/src/components/grid.js" />
+        <option value="$PROJECT_DIR$/src/components/generateNewCell.js" />
         <option value="$PROJECT_DIR$/src/components/handleColistion.js" />
+        <option value="$PROJECT_DIR$/src/components/grid.js" />
       </list>
     </option>
   </component>
@@ -194,11 +192,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546973317681</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added FindCellHeight method to handle collision&#10;all function in grid">
+      <created>1546977542175</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1546977542175</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17174000" />
+    <option name="totallyTimeSpent" value="23952000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="32" width="1936" height="1056" extended-state="6" />
@@ -249,7 +254,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added FindCellHeight method to handle collision" />
-    <option name="LAST_COMMIT_MESSAGE" value="added FindCellHeight method to handle collision" />
+    <MESSAGE value="added FindCellHeight method to handle collision&#10;all function in grid" />
+    <option name="LAST_COMMIT_MESSAGE" value="added FindCellHeight method to handle collision&#10;all function in grid" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
@@ -285,6 +291,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/handleMove.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/findCellHeight.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -294,25 +303,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/generateNewCell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        <state relative-caret-position="138">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/handleMove.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/handleColistion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
+        <state relative-caret-position="230">
+          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="721">
-          <caret line="94" column="19" lean-forward="true" selection-start-line="94" selection-start-column="19" selection-end-line="94" selection-end-column="19" />
+        <state relative-caret-position="399">
+          <caret line="114" column="12" selection-start-line="114" selection-start-column="12" selection-end-line="124" selection-end-column="13" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
