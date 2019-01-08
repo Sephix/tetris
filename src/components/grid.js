@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import GenerateNewCell from "./generateNewCell";
+import HandleCollision from "./handleColistion";
 
 class Grid extends Component {
     constructor(props) {
@@ -60,7 +61,22 @@ class Grid extends Component {
         if (this.state.cell === 0) {
             this.setState({cell: GenerateNewCell.newCell()})
         }
+
+        let newCell = this.state.cell;
+
         if (newY >= 0 && this.state.x >= 0) {
+
+            //Removing last cell
+            if (lastY >= 0 && this.state.x >= 0) {
+                for (let i = 0; i < 4; i++) {
+                    for (let j = 0; j < 4; j++) {
+                        if (this.state.cell[i][j] === "black" && lastY >= 0){
+                            grid[lastY+i][j] = "white"
+                        }
+                    }
+                }
+            }
+
             //Updating cell pos
             for (let i = 0; i < 4; i++) {
                 for (let j = 0; j < 4; j++) {
@@ -70,20 +86,14 @@ class Grid extends Component {
                     }
                 }
             }
-            //Removing last cell
-            if (lastY >= 0 && this.state.x >= 0) {
-                for (let i = 0; i < 4; i++) {
-                    for (let j = 0; j < 4; j++) {
-                        if (this.state.cell[i][j] === "black") {
-                            grid[lastY][this.state.x + j] = "white";
-                            this.setState({grid});
-                        }
-                    }
-                }
-            }
         }
-        newY++;
-        this.setState({y: newY});
+        if(HandleCollision(grid, newCell, newY, this.state.x)){
+            this.setState({cell: GenerateNewCell.newCell()});
+            this.setState({y: -1});
+        }else {
+            newY++;
+            this.setState({y: newY});
+        }
     }
 }
 
