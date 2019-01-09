@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import GenerateNewCell from "./generateNewCell";
 import HandleCollision from "./handleColistion";
-import HandleMove from "./handleMove";
 
 class Grid extends Component {
     constructor(props) {
@@ -66,63 +65,65 @@ class Grid extends Component {
         }
 
         let newCell = this.state.cell;
-        console.log(newCell);
 
         switch (key) {
             case 's' :
-                if (lastY >= 0 && this.state.x >= 0) {
+                if(!HandleCollision(grid, newCell, newY, newY+1, newX, newX)) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
                             if (newCell[i][j] === "black" && lastY >= 0) {
-                                grid[lastY + i][this.state.x + j] = "white"
+                                grid[lastY + i][newX + j] = "white"
                             }
                         }
                     }
-                }
-                newY++;
-                this.setState({y: newY});
+                    newY++;
+                    this.setState({y: newY});
+                } else if(newY !==-1){
+                        this.setState({cell: GenerateNewCell.newCell()})
+                        this.setState({y: -1});
+                    }
                 break;
 
             case 'd' :
-                for (let i = 0; i < 4; i++) {
-                    for (let j = 0; j < 4; j++) {
-                        if (newCell[i][j] === "black") {
-                            grid[i + newY][newX + j] = "white";
+                if(!HandleCollision(grid, newCell, newY, newY,newX,newX+1)) {
+                    for (let i = 0; i < 4; i++) {
+                        for (let j = 0; j < 4; j++) {
+                            if (newCell[i][j] === "black") {
+                                grid[i + newY][newX + j] = "white";
+                            }
                         }
                     }
+                    newX++;
+                    this.setState({x: newX});
                 }
-                newX++;
-                this.setState({x: newX});
                 break;
 
             case 'q' :
-                for (let i = 0; i < 4; i++) {
-                    for (let j = 0; j < 4; j++) {
-                        if (newCell[i][j] === "black") {
-                            grid[i + newY][newX + j] = "white";
+                if(!HandleCollision(grid, newCell, newY, newY, newX,newX-1)) {
+                    for (let i = 0; i < 4; i++) {
+                        for (let j = 0; j < 4; j++) {
+                            if (newCell[i][j] === "black") {
+                                grid[i + newY][newX + j] = "white";
+                            }
                         }
                     }
+                    newX--;
+                    this.setState({x: newX});
                 }
-                newX--;
-                this.setState({x: newX});
                 break;
         }
 
-        if(HandleCollision(grid, newCell, newY, newX)){
-            this.setState({cell: GenerateNewCell.newCell()})
-            this.setState({y: -1});
-        }
-            if (newY >= 0 && newX >= 0) {
-                //Updating cell pos
-                for (let i = 0; i < 4; i++) {
-                    for (let j = 0; j < 4; j++) {
-                        if (newCell[i][j] === "black") {
-                            grid[newY + i][newX + j] = "black";
-                            this.setState({grid});
-                        }
+        if (newY >= 0 && newX >= 0) {
+            //Updating cell pos
+            for (let i = 0; i < 4; i++) {
+                for (let j = 0; j < 4; j++) {
+                    if (newCell[i][j] === "black") {
+                        grid[newY + i][newX + j] = "black";
+                        this.setState({grid});
                     }
                 }
             }
+        }
     }
 }
 
