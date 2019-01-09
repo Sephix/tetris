@@ -22,6 +22,10 @@ div b {
   margin-right: 1px;
   display: inline-block;
 }
+.void{
+  border: white;
+  visibility: hidden;
+}
 
 div .board {
   padding-top: 100px;

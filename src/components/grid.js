@@ -71,8 +71,9 @@ class Grid extends Component {
                 if(!HandleCollision(grid, newCell, newY, newY+1, newX, newX)) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
-                            if (newCell[i][j] === "black" && lastY >= 0) {
-                                grid[lastY + i][newX + j] = "white"
+                            if (newCell[i][j] === "black"){
+                                if(lastY < 0){grid[i][newX + j] = "white"}
+                                else{grid[lastY + i][newX + j] = "white"}
                             }
                         }
                     }
