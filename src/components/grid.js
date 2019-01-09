@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import GenerateNewCell from "./generateNewCell";
 import HandleCollision from "./handleColistion";
+import HandleRotation from "./handleRotation";
 
 class Grid extends Component {
     constructor(props) {
@@ -67,22 +68,35 @@ class Grid extends Component {
         let newCell = this.state.cell;
 
         switch (key) {
+            case 'z' :
+                if(this.state.cell !== 0){
+                    for (let i = 0; i < 4; i++) {
+                        for (let j = 0; j < 4; j++) {
+                            if (newCell[i][j] === "black") {
+                                grid[i + newY][newX + j] = "white";
+                            }
+                        }
+                    }
+                    newCell = HandleRotation(grid, newCell, newX, newY);
+                    this.setState({cell: newCell});
+                }
+                break;
+
             case 's' :
                 if(!HandleCollision(grid, newCell, newY, newY+1, newX, newX)) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
-                            if (newCell[i][j] === "black"){
-                                if(lastY < 0){grid[i][newX + j] = "white"}
-                                else{grid[lastY + i][newX + j] = "white"}
+                            if (newCell[i][j] === "black" && newY > -1){
+                                grid[i+newY][j + newX] = "white";
                             }
+
                         }
                     }
                     newY++;
                     this.setState({y: newY});
-                } else if(newY !==-1){
-                        this.setState({cell: GenerateNewCell.newCell()})
-                        this.setState({y: -1});
-                    }
+                } else if(newY !== -1){
+                    this.setState({y: -1});
+                }
                 break;
 
             case 'd' :

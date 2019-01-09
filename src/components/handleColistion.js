@@ -11,6 +11,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
     let cellLenght = (cell !== 0 ) ? FindCellLenght(cell) : 0;
 
     if(y > (18-cellHeight)){
+        console.log("true");
         return true;
     }
     if(newX > (10-cellLenght)){
