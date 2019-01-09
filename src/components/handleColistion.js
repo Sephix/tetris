@@ -29,7 +29,19 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
         }
     }
 
- 
+    if(newX < 9 - cellLenght && newX > x) {
+        for (let i = 0; i < 4; i++) {
+            for (let j = 0; j < 4; j++) {
+                if (cell[i][j] === "black" && (cell[i][j + 1] !== "black")) {
+                    console.log(newX+j);
+                    if (grid[y + i][x+j+1] === "black") {
+                        testing = true;
+                    }
+                }
+            }
+        }
+    }
+
     for(let i = 0; i<4; i++) {
         for (let j = 0; j < 4; j++) {
             if (cell[i][j] === "black" && (cell[i + 1][j] !== "black")) {

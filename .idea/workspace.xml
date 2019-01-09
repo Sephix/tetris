@@ -6,9 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a01008e-22e1-410b-8848-b41eece0d5e7" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/handleColistion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/handleColistion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/handleMove.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/findCellLenght.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -36,8 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/grid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="156">
-              <caret line="70" column="63" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
+            <state relative-caret-position="540">
+              <caret line="90" column="60" lean-forward="true" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -48,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/handleColistion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
-              <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+            <state relative-caret-position="484">
+              <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -213,7 +211,7 @@
       <workItem from="1546883905884" duration="8815000" />
       <workItem from="1546894858476" duration="1790000" />
       <workItem from="1547030726249" duration="1273000" />
-      <workItem from="1547036888828" duration="5029000" />
+      <workItem from="1547036888828" duration="8868000" />
     </task>
     <task id="LOCAL-00001" summary="added FindCellHeight method to handle collision">
       <created>1546973317681</created>
@@ -229,11 +227,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546977542175</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="added side collision&#10;need bot fix for bot collision">
+      <created>1547042108082</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1547042108082</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30362000" />
+    <option name="totallyTimeSpent" value="34201000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="26" width="1920" height="1054" extended-state="6" />
@@ -285,7 +290,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added FindCellHeight method to handle collision" />
     <MESSAGE value="added FindCellHeight method to handle collision&#10;all function in grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="added FindCellHeight method to handle collision&#10;all function in grid" />
+    <MESSAGE value="added side collision&#10;need bot fix for bot collision" />
+    <option name="LAST_COMMIT_MESSAGE" value="added side collision&#10;need bot fix for bot collision" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
@@ -345,8 +351,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="70" column="63" selection-start-line="70" selection-start-column="63" selection-end-line="70" selection-end-column="63" />
+        <state relative-caret-position="540">
+          <caret line="90" column="60" lean-forward="true" selection-start-line="90" selection-start-column="60" selection-end-line="90" selection-end-column="60" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
@@ -355,8 +361,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/handleColistion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" column="1" selection-start-line="31" selection-start-column="1" selection-end-line="31" selection-end-column="1" />
+        <state relative-caret-position="484">
+          <caret line="36" column="41" selection-start-line="36" selection-start-column="41" selection-end-line="36" selection-end-column="41" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
