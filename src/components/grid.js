@@ -94,11 +94,12 @@ class Grid extends Component {
                 }
                 else{
                     livingCell = false;
+                    console.log(livingCell);
                 }
                 break;
 
             case 'd' :
-                if(livingCell && !HandleCollision(grid, newCell, newY, newY,newX,newX+1) && newY > -1) {
+                if(livingCell && !HandleCollision(grid, newCell, newY, newY, newX,newX+1)) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
                             if (newCell[i][j] === "black") {
