@@ -11,7 +11,6 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
     let cellLenght = (cell !== 0 ) ? FindCellLenght(cell) : 0;
 
     if(y > (18-cellHeight)){
-        console.log("true");
         return true;
     }
     if(newX > (10-cellLenght)){
@@ -21,9 +20,9 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
         return true;
     }
     if(newX >= 0 && newX < x){
-        for(let i = 0; i < cellHeight+1; i++){
+        for(let i = 0; i < cellHeight; i++){
             if(cell[i][0] === "black"){
-                if(grid[y + i][newX] === "black"){
+                if(grid[y+i][newX] === "black"){
                     testing = true;
                 }
             }
@@ -42,15 +41,22 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
         }
     }
 
-    for(let i = 0; i<4; i++) {
+    for(let i = 0; i < 4; i++) {
         for (let j = 0; j < 4; j++) {
-            if (cell[i][j] === "black" && (cell[i + 1][j] !== "black")) {
+            if (i < 3) {
+                if (cell[i][j] === "black" && (cell[i + 1][j] !== "black")) {
+                    if (grid[y + i + 1][x + j] === "black") {
+                        testing = true;
+                    }
+                }
+            } else if (cell[i][j] === "black"){
                 if (grid[y + i + 1][x + j] === "black") {
                     testing = true;
                 }
             }
         }
     }
+
     return testing;
 
 }

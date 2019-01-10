@@ -32,6 +32,7 @@ class Grid extends Component {
             x: 0,
             y: -1,
             cell: 0,
+            livingCell: false,
         }
     }
 
@@ -60,16 +61,12 @@ class Grid extends Component {
         let newY = this.state.y;
         let newX = this.state.x;
         let lastY = newY - 1;
-
-        if (this.state.cell === 0) {
-            this.setState({cell: GenerateNewCell.newCell()})
-        }
-
+        let livingCell = this.state.livingCell;
         let newCell = this.state.cell;
 
         switch (key) {
             case 'z' :
-                if(this.state.cell !== 0){
+                if(livingCell){
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
                             if (newCell[i][j] === "black") {
@@ -83,24 +80,25 @@ class Grid extends Component {
                 break;
 
             case 's' :
-                if(!HandleCollision(grid, newCell, newY, newY+1, newX, newX)) {
+                if(livingCell && !HandleCollision(grid, newCell, newY, newY+1, newX, newX)) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
-                            if (newCell[i][j] === "black" && newY > -1){
-                                grid[i+newY][j + newX] = "white";
+                            if (newCell[i][j] === "black" && newY > -1) {
+                                grid[i + newY][j + newX] = "white";
                             }
 
                         }
                     }
                     newY++;
                     this.setState({y: newY});
-                } else if(newY !== -1){
-                    this.setState({y: -1});
+                }
+                else{
+                    livingCell = false;
                 }
                 break;
 
             case 'd' :
-                if(!HandleCollision(grid, newCell, newY, newY,newX,newX+1)) {
+                if(livingCell && !HandleCollision(grid, newCell, newY, newY,newX,newX+1) && newY > -1) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
                             if (newCell[i][j] === "black") {
@@ -114,7 +112,7 @@ class Grid extends Component {
                 break;
 
             case 'q' :
-                if(!HandleCollision(grid, newCell, newY, newY, newX,newX-1)) {
+                if(livingCell && !HandleCollision(grid, newCell, newY, newY, newX,newX-1) && newY > -1) {
                     for (let i = 0; i < 4; i++) {
                         for (let j = 0; j < 4; j++) {
                             if (newCell[i][j] === "black") {
@@ -126,6 +124,12 @@ class Grid extends Component {
                     this.setState({x: newX});
                 }
                 break;
+        }
+        if(!livingCell){
+            newY = -1;
+            this.setState({y: newY});
+            this.setState({cell: GenerateNewCell()});
+            this.setState({livingCell: true});
         }
 
         if (newY >= 0 && newX >= 0) {
