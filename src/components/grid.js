@@ -29,10 +29,11 @@ class Grid extends Component {
                 ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
                 ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
             ],
-            x: 0,
+            x:  Math.round(Math.random() * 6),
             y: -1,
             cell: 0,
             livingCell: false,
+            started: false,
         }
     }
 
@@ -62,6 +63,7 @@ class Grid extends Component {
         let newX = this.state.x;
         let lastY = newY - 1;
         let livingCell = this.state.livingCell;
+        let started = this.state.started;
         let newCell = this.state.cell;
 
         switch (key) {
@@ -78,7 +80,6 @@ class Grid extends Component {
                     this.setState({cell: newCell});
                 }
                 break;
-
             case 's' :
                 if(livingCell && !HandleCollision(grid, newCell, newY, newY+1, newX, newX)) {
                     for (let i = 0; i < 4; i++) {
@@ -97,7 +98,6 @@ class Grid extends Component {
                     console.log(livingCell);
                 }
                 break;
-
             case 'd' :
                 if(livingCell && !HandleCollision(grid, newCell, newY, newY, newX,newX+1)) {
                     for (let i = 0; i < 4; i++) {
@@ -111,7 +111,6 @@ class Grid extends Component {
                     this.setState({x: newX});
                 }
                 break;
-
             case 'q' :
                 if(livingCell && !HandleCollision(grid, newCell, newY, newY, newX,newX-1) && newY > -1) {
                     for (let i = 0; i < 4; i++) {
@@ -125,10 +124,17 @@ class Grid extends Component {
                     this.setState({x: newX});
                 }
                 break;
+            case ' ' :
+                    if(!started){
+                        started = true;
+                }
+                break;
         }
+
         if(!livingCell){
             newY = -1;
             this.setState({y: newY});
+            this.setState({x:  Math.round(Math.random() * 6)});
             this.setState({cell: GenerateNewCell()});
             this.setState({livingCell: true});
         }
