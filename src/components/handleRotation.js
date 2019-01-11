@@ -15,8 +15,6 @@ function HandleRotation(grid, cell, x, y) {
         ["white", "white", "white", "white"],
         ["white", "white", "white", "white"]
     ];
-    let thisX = x;
-    let thisY = y;
 
     for(let i = 0; i < 4; i++){
         for(let j = 0; j < 4; j++){
@@ -25,15 +23,31 @@ function HandleRotation(grid, cell, x, y) {
     }
     let cellHeight = (cell !== 0 ) ? FindCellHeight(tempCell) : 0;
     let cellLenght = (cell !== 0 ) ? FindCellLenght(tempCell) : 0;
+
     for (let k = 0; k < cellHeight+1; k++) {
         for (let l = 0; l < cellLenght+1; l++) {
             newCell[k][l] = tempCell[k][cellLenght - l];
         }
     }
 
-    if(HandleCollision(grid, newCell, y, y, x, x)){
+    let newCellHeight = (cell !== 0 ) ? FindCellHeight(newCell) : 0;
+    let newCellLenght = (cell !== 0 ) ? FindCellLenght(newCell) : 0;
+
+
+    for(let i = 0; i <= newCellHeight; i++) {
+        for(let j = 0; j <= newCellLenght; j++){
+            if(y > 18-newCellLenght && x < 9 - newCellLenght && newCell[i][j] === "black"){
+                if(grid[y+i][x + j] === "black"){
+                    console.log("returning cell");
+                    return cell;
+                }
+            }
+        }
+    }
+    if(y > (18 - newCellHeight +1) || x > 9 - newCellLenght){
         return cell;
-    }else{
+    }
+    else{
         return newCell;
     }
 
