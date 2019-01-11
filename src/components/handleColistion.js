@@ -11,7 +11,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
     let cellLenght = (cell !== 0 ) ? FindCellLenght(cell) : 0;
 
     //Handling side boundaries 
-    if(newX > (10-cellLenght)){
+    if(newX > (9-cellLenght)){
         return true;
     }
     if(newX<0){
@@ -40,7 +40,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
         }
     }
 //Right collisions
-    if(newX < 10 - cellLenght && newX > x) {
+    if(newX < 9 - cellLenght && newX > x) {
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 if (cell[i][j] === "black" && (cell[i][j + 1] !== "black")) {

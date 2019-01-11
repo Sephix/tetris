@@ -2,32 +2,33 @@ import React, {Component} from "react";
 import GenerateNewCell from "./generateNewCell";
 import HandleCollision from "./handleColistion";
 import HandleRotation from "./handleRotation";
+import HandleLineDestruction from "./handleLineDestruction"
 
 class Grid extends Component {
     constructor(props) {
         super(props);
         this.state = {
             grid: [
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
-                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
+                ["white", "white", "white", "white", "white", "white", "white", "white", "white", "white"],
             ],
             x:  Math.round(Math.random() * 6),
             y: -1,
@@ -138,6 +139,8 @@ class Grid extends Component {
             this.setState({cell: GenerateNewCell()});
             this.setState({livingCell: true});
         }
+
+        grid = HandleLineDestruction(grid);
 
         if (newY >= 0 && newX >= 0) {
             //Updating cell pos
