@@ -33,12 +33,13 @@ function HandleRotation(grid, cell, x, y) {
     let newCellHeight = (cell !== 0 ) ? FindCellHeight(newCell) : 0;
     let newCellLenght = (cell !== 0 ) ? FindCellLenght(newCell) : 0;
 
-
+    if(x < 9 - newCellLenght && y > 19-newCellHeight){
+        return cell;
+    }
     for(let i = 0; i <= newCellHeight; i++) {
         for(let j = 0; j <= newCellLenght; j++){
-            if(y > 18-newCellLenght && x < 9 - newCellLenght && newCell[i][j] === "black"){
-                if(grid[y+i][x + j] === "black"){
-                    console.log("returning cell");
+            if(newCell[i][j] === "black"){
+                if(y+i < 19 && grid[y+i][x + j] === "black"){
                     return cell;
                 }
             }
