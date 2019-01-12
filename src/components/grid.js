@@ -96,7 +96,6 @@ class Grid extends Component {
                         this.setState({y: newY});
                     } else {
                         livingCell = false;
-                        console.log(livingCell);
                     }
                     break;
                 case 'd' :

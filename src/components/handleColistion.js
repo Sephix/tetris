@@ -14,7 +14,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
         && newX === x){
         for (let i = 0; i < cellHeight + 1; i++) {
             for (let j = 0; j < cellLenght + 1; j++) {
-                if(cell[i][j] !== "white" && grid[y + i + 1][x + j] !== "white"){
+                if(cell[i][j] !== "white" && grid[y + i][x + j] !== "white"){
                     return true;
                 }
             }
@@ -35,6 +35,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
             for(let j = 0; j < cellLenght+1; j++){
                 if (cell[i][0] === "black") {
                     if (grid[y + i][newX] === "black") {
+                        console.log("1");
                         testing = true;
                     }
                 }
@@ -49,7 +50,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
         }
     }
 //Right collisions
-    if(newX < 9 - cellLenght && newX > x) {
+    if(newX < 10 - cellLenght && newX > x) {
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 if (cell[i][j] === "black" && (cell[i][j + 1] !== "black")) {
