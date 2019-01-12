@@ -10,7 +10,7 @@ function HandleCollision(grid, cell, y, newY, x, newX) {
     let cellHeight = (cell !== 0 ) ? FindCellHeight(cell) : 0;
     let cellLenght = (cell !== 0 ) ? FindCellLenght(cell) : 0;
 
-    if(newY === y && y > 0
+    if(newY === y && y >= 0
         && newX === x){
         for (let i = 0; i < cellHeight + 1; i++) {
             for (let j = 0; j < cellLenght + 1; j++) {

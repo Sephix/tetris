@@ -35,7 +35,24 @@ class Grid extends Component {
             cell: 0,
             livingCell: false,
             started: false,
+            seconds: 0,
         }
+    }
+
+    tick() {
+        this.setState(prevState => ({
+            seconds: prevState.seconds + 1
+        }));
+        if (this.state.started) {
+            this.handleKeyPress(0, "down");
+        }
+    }
+
+    componentDidMount() {
+        this.interval = setInterval(() => this.tick(), 1000);
+    }
+    componentWillUnmount() {
+        clearInterval(this.interval);
     }
 
     render() {
@@ -53,16 +70,18 @@ class Grid extends Component {
                         }
                     </p>
                 )}
+                <div>
+                    Seconds: {this.state.seconds}
+                </div>
             </div>
         );
     }
 
-    handleKeyPress = (event) => {
-        let key = event.key;
+     handleKeyPress = (event, move) => {
+        let key = (event !== 0) ? event.key : move;
         let grid = [...this.state.grid];
         let newY = this.state.y;
         let newX = this.state.x;
-        let lastY = newY - 1;
         let livingCell = this.state.livingCell;
         let started = this.state.started;
         let newCell = this.state.cell;
@@ -82,7 +101,8 @@ class Grid extends Component {
                         this.setState({cell: newCell});
                     }
                     break;
-                case 's' :
+                case 'down':
+                case 's'  :
                     if (livingCell && !HandleCollision(grid, newCell, newY, newY + 1, newX, newX)) {
                         for (let i = 0; i < 4; i++) {
                             for (let j = 0; j < 4; j++) {
@@ -132,11 +152,15 @@ class Grid extends Component {
             }
         }
 
-        if(!livingCell){
+        if(!livingCell && started){
             newY = 0;
             livingCell = true;
             newX = Math.round(Math.random() * 6);
             newCell = GenerateNewCell();
+            if(HandleCollision(grid, newCell, newY, newY, newX, newX)){
+                started = false;
+                livingCell = false;
+            }
         }
 
         grid = HandleLineDestruction(grid);
@@ -156,6 +180,9 @@ class Grid extends Component {
         this.setState({y: newY});
         this.setState({livingCell: livingCell});
         this.setState({cell: newCell});
+        if(!started){
+            this.setState({started: true});
+        }
     }
 }
 
