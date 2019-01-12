@@ -1,7 +1,5 @@
 function HandleLineDestruction(grid) {
     let newGrid = grid;
-    let tempGrid = grid;
-    let dLine = [];
     let count = 0;
 
     for(let i = 19; i > 0; i--){
