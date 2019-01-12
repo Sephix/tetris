@@ -32,20 +32,21 @@ function HandleRotation(grid, cell, x, y) {
 
     let newCellHeight = (cell !== 0 ) ? FindCellHeight(newCell) : 0;
     let newCellLenght = (cell !== 0 ) ? FindCellLenght(newCell) : 0;
-
-    if(x < 9 - newCellLenght && y > 19-newCellHeight){
-        return cell;
-    }
-    for(let i = 0; i <= newCellHeight; i++) {
-        for(let j = 0; j <= newCellLenght; j++){
-            if(newCell[i][j] === "black"){
-                if(y+i < 19 && grid[y+i][x + j] === "black"){
-                    return cell;
-                }
-            }
-        }
-    }
-    if(y > (18 - newCellHeight +1) || x > 9 - newCellLenght){
+    //
+    // if(x < 9 - newCellLenght && y > 19-newCellHeight){
+    //     return cell;
+    // }
+    // for(let i = 0; i <= newCellHeight; i++) {
+    //     for(let j = 0; j <= newCellLenght; j++){
+    //         if(newCell[i][j] === "black"){
+    //             if(y+i < 19 && grid[y+i][x + j] === "black"){
+    //                 return cell;
+    //             }
+    //         }
+    //     }
+    // }
+    if(y > 19 - newCellHeight ||
+        HandleCollision(grid, newCell, y, y, x, x)){
         return cell;
     }
     else{
