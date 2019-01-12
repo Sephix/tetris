@@ -4,13 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/components/grid.js" line="34" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7a01008e-22e1-410b-8848-b41eece0d5e7" name="Default Changelist" comment="All collisions fixed">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/generateNewCell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/generateNewCell.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/grid.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/handleColistion.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/handleColistion.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/handleRotation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/handleRotation.js" afterDir="false" />
-    </list>
+    <list default="true" id="7a01008e-22e1-410b-8848-b41eece0d5e7" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -22,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/grid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="491">
+            <state relative-caret-position="376">
               <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
             </state>
           </provider>
@@ -34,8 +28,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/handleColistion.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+            <state relative-caret-position="284">
+              <caret line="71" column="81" lean-forward="true" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
               <folding>
                 <element signature="e#0#46#0" expanded="true" />
               </folding>
@@ -64,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/handleLineDestruction.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="368">
-              <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+            <state relative-caret-position="322">
+              <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -269,11 +263,18 @@
       <option name="project" value="LOCAL" />
       <updated>1547220617512</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Fixing cell death and generation">
+      <created>1547293491000</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1547293491000</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62437000" />
+    <option name="totallyTimeSpent" value="63138000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="32" width="1936" height="1056" extended-state="6" />
@@ -329,7 +330,8 @@
     <MESSAGE value="Collision fixed" />
     <MESSAGE value="added rotation function" />
     <MESSAGE value="All collisions fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="All collisions fixed" />
+    <MESSAGE value="Fixing cell death and generation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing cell death and generation" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/App.test.js" />
@@ -380,6 +382,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/generateNewCell.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1058">
+          <caret line="46" column="54" lean-forward="true" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/handleLineDestruction.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" column="9" lean-forward="true" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/handleRotation.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="598">
@@ -392,8 +408,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/handleColistion.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+        <state relative-caret-position="284">
+          <caret line="71" column="81" lean-forward="true" selection-start-line="71" selection-start-column="81" selection-end-line="71" selection-end-column="81" />
           <folding>
             <element signature="e#0#46#0" expanded="true" />
           </folding>
@@ -402,22 +418,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
+        <state relative-caret-position="376">
           <caret line="142" column="41" selection-start-line="142" selection-start-column="41" selection-end-line="142" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/generateNewCell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1058">
-          <caret line="46" column="54" lean-forward="true" selection-start-line="46" selection-start-column="54" selection-end-line="46" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/handleLineDestruction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="368">
-          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
         </state>
       </provider>
     </entry>
