@@ -7,6 +7,16 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+div .default{
+  margin-left: 45%;
+  border: 1px solid blue;
+  width: 234px;
+}
+div .lost{
+  margin-left: 45%;
+  border: 1px solid red;
+  width: 234px;
+}
 div p {
   text-align: center;
   padding: 0;

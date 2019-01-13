@@ -35,6 +35,8 @@ class Grid extends Component {
             cell: 0,
             livingCell: false,
             started: false,
+            lost: false,
+            status: "default",
             seconds: 0,
         }
     }
@@ -58,32 +60,36 @@ class Grid extends Component {
     render() {
         const board = this.state.grid;
         return (
-            <div onKeyPress={this.handleKeyPress}
-                 className="board"
-                 tabIndex="0">
-                {board.map((board, index) =>
-                    <p>
-                        {
-                            board.map((board, index) =>
-                                <b className={board}></b>
-                            )
-                        }
-                    </p>
-                )}
-                <div>
-                    Seconds: {this.state.seconds}
+            <div className="board">
+                <div onKeyPress={this.handleKeyPress}
+                     className={this.state.status}
+                     tabIndex="0">
+                    {board.map((board, index) =>
+                        <p>
+                            {
+                                board.map((board, index) =>
+                                    <b className={board}></b>
+                                )
+                            }
+                        </p>
+                    )}
+                    <div>
+                        Seconds: {this.state.seconds}
+                    </div>
                 </div>
             </div>
+
         );
     }
 
-     handleKeyPress = (event, move) => {
+    handleKeyPress = (event, move) => {
         let key = (event !== 0) ? event.key : move;
         let grid = [...this.state.grid];
         let newY = this.state.y;
         let newX = this.state.x;
         let livingCell = this.state.livingCell;
         let started = this.state.started;
+        let lost = this.state.lost;
         let newCell = this.state.cell;
 
         if(livingCell) {
@@ -152,7 +158,7 @@ class Grid extends Component {
             }
         }
 
-        if(!livingCell && started){
+        if(!livingCell && started && !lost){
             newY = 0;
             livingCell = true;
             newX = Math.round(Math.random() * 6);
@@ -160,6 +166,7 @@ class Grid extends Component {
             if(HandleCollision(grid, newCell, newY, newY, newX, newX)){
                 started = false;
                 livingCell = false;
+                lost = true;
             }
         }
 
@@ -180,8 +187,12 @@ class Grid extends Component {
         this.setState({y: newY});
         this.setState({livingCell: livingCell});
         this.setState({cell: newCell});
+        this.setState({lost: lost});
         if(!started){
             this.setState({started: true});
+        }
+        if(lost){
+            this.setState({status: "lost"});
         }
     }
 }
