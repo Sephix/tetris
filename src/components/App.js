@@ -13,6 +13,7 @@ const App = () => {
     gameGrid.incrementCellRow();
     gameGrid.incrementCellRow();
     gameGrid.incrementCellRow();
+    cell.rotate();
     gameGrid.renderCelltoGrid();
 
     return (

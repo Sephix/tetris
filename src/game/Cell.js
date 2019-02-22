@@ -16,6 +16,9 @@ class Cell{
         this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth));
     }
 
+    rotate(){
+        let rotate;
+    }
     findCellSize (){
         //Cell Height
         for (let i = 0; i < 4; i++) {

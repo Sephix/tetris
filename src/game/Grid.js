@@ -23,7 +23,6 @@ class Grid {
                     this.grid[rowPos-i][j] = cell[cellHeight-1 - i][j - colPos];
                 }
             }
-            console.log(this.grid);
         }
     }
 
