@@ -1,5 +1,4 @@
 import {HEIGHT, WIDTH, BACKGROUND_COLOR} from "./settings";
-import Cell from './Cell'
 
 class Grid {
 
@@ -28,11 +27,10 @@ class Grid {
         }
     }
 
-    generateNewCell(){
+    addingCell(cell){
         if(!this.livingCell){
-            this.cell = new Cell();
+            this.cell = cell;
             this.livingCell = true;
-            this.cell.colPos = Math.floor(Math.random() * (WIDTH - this.cell.cellWidth));
         }}
 
     generateGrid(){

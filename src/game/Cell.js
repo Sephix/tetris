@@ -1,4 +1,4 @@
-import {BACKGROUND_COLOR} from "./settings";
+import {BACKGROUND_COLOR, WIDTH} from "./settings";
 
 import * as Cells from "./cellCollection";
 
@@ -9,12 +9,11 @@ class Cell{
     cellHeight = 0;
     cellWidth = 0;
     rowPos = -1;
-    colPos = 0;
 
     constructor (){
         this.randomCellSelection();
         this.findCellSize();
-        Cell.alive = true;
+        this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth));
     }
 
     findCellSize (){

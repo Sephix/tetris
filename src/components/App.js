@@ -1,11 +1,13 @@
 import React,{useState} from 'react';
 
 import Grid from '../game/Grid';
+import Cell from "../game/Cell";
 
 const App = () => {
     const gameGrid = new Grid();
-    const [grid, setGrid] = useState(gameGrid.grid);
-    gameGrid.generateNewCell();
+    const [grid] = useState(gameGrid.grid);
+    const cell = new Cell();
+    gameGrid.addingCell(cell);
     gameGrid.incrementCellRow();
     gameGrid.incrementCellRow();
     gameGrid.incrementCellRow();
@@ -15,7 +17,8 @@ const App = () => {
 
     return (
         <div className="board">
-        {grid.map(r => <p>{ r.map( c => <b className={c}/> ) }</p> )}
+        {grid.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c} key={`${i}${ci}`}/>)}
+        </p> )}
         </div>
     )
 };
