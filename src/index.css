@@ -1,0 +1,86 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+div .default{
+    margin-left: 45%;
+    border: 1px solid blue;
+    width: 234px;
+}
+div .lost{
+    margin-left: 45%;
+    border: 1px solid red;
+    width: 234px;
+}
+div p {
+    text-align: center;
+    padding: 0;
+    margin: 2px;
+    height: 21px;
+}
+
+div b {
+    border: 1px solid black;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin-right: 1px;
+    display: inline-block;
+}
+div .board {
+    padding-top: 100px;
+    position: center;
+    -webkit-user-select: none;
+    height: 600px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: slategrey;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+
+.green {
+    background-color: green;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+.blue {
+    background-color: blue;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+.orange {
+    background-color: orange;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+.purple {
+    background-color: purple;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+.cyan {
+    background-color: cyan;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+.yellow {
+    background-color: yellow;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}
+.red {
+    background-color: red;
+    outline: 1px solid white;
+    outline-offset: -3px;
+}

@@ -10,8 +10,8 @@ const App = () => {
     gameGrid.renderCelltoGrid();
 
     return (
-        <div>
-        {grid.map(r => <p>{ r.map( c => <b> {c} </b> ) }</p> )}
+        <div className="board">
+        {grid.map(r => <p>{ r.map( c => <b className={c}/> ) }</p> )}
         </div>
     )
 };

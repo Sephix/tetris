@@ -16,14 +16,16 @@ class Grid {
     }
 
     renderCelltoGrid(){
-        // if(this.livingCell){
-        //     let { cell, cellHeight, cellWidth, rowPos, colPos } = this.cell;
-        //     for (let i = rowPos; i > rowPos - cellHeight; i--){
-        //         for (let j = colPos; j < colPos + cellWidth; j++){
-        //             this.grid[i][j] = cell[cellHeight - i - 1][cellWidth];
-        //         }
-        //     }
-        // }
+        if(this.livingCell){
+            console.log(this.cell);
+            let { cell, cellHeight, cellWidth, rowPos, colPos } = this.cell;
+            for (let i = 0; i > 0 - (cellHeight - 1); i--){
+                for (let j = 0; j < (cellWidth); j++){
+                    this.grid[i][j] = cell[cellHeight - i - 1][cellWidth - j -1];
+                }
+            }
+            console.log(this.grid);
+        }
     }
 
     generateNewCell(){
