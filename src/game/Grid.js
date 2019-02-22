@@ -17,11 +17,11 @@ class Grid {
 
     renderCelltoGrid(){
         if(this.livingCell){
-            console.log(this.cell);
             let { cell, cellHeight, cellWidth, rowPos, colPos } = this.cell;
-            for (let i = 0; i > 0 - (cellHeight - 1); i--){
-                for (let j = 0; j < (cellWidth); j++){
-                    this.grid[i][j] = cell[cellHeight - i - 1][cellWidth - j -1];
+            let nbRow = (cellHeight-1 > rowPos) ? rowPos+1 : cellHeight;
+            for (let i = 0; i < nbRow; i++){
+                for (let j = colPos; j < colPos + cellWidth; j++){
+                    this.grid[rowPos-i][j] = cell[cellHeight-1 - i][j - colPos];
                 }
             }
             console.log(this.grid);
@@ -32,7 +32,7 @@ class Grid {
         if(!this.livingCell){
             this.cell = new Cell();
             this.livingCell = true;
-            //this.cell.colPos = Math.floor(Math.random() * (WIDTH - this.cell.cellWidth));
+            this.cell.colPos = Math.floor(Math.random() * (WIDTH - this.cell.cellWidth));
         }}
 
     generateGrid(){

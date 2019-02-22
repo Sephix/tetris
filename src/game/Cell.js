@@ -65,8 +65,6 @@ class Cell{
                 this.cell = Cells.seven;
                 break;
             default:
-                this.cell = Cells.one;
-                break;
         }
     }
 }

@@ -7,6 +7,10 @@ const App = () => {
     const [grid, setGrid] = useState(gameGrid.grid);
     gameGrid.generateNewCell();
     gameGrid.incrementCellRow();
+    gameGrid.incrementCellRow();
+    gameGrid.incrementCellRow();
+    gameGrid.incrementCellRow();
+    gameGrid.incrementCellRow();
     gameGrid.renderCelltoGrid();
 
     return (
