@@ -17,7 +17,6 @@ class Cell{
     }
 
     rotate(){
-        let rotate;
     }
     findCellSize (){
         //Cell Height
