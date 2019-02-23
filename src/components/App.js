@@ -1,25 +1,20 @@
 import React,{useState} from 'react';
-
-import Grid from '../game/Grid';
-import Cell from "../game/Cell";
+import { Game } from "../game/Main";
 
 const App = () => {
-    const gameGrid = new Grid();
-    const [grid] = useState(gameGrid.grid);
-    const cell = new Cell();
-    gameGrid.addingCell(cell);
-    gameGrid.incrementCellRow();
-    gameGrid.incrementCellRow();
-    gameGrid.incrementCellRow();
-    gameGrid.incrementCellRow();
-    gameGrid.incrementCellRow();
-    cell.rotate();
-    gameGrid.renderCelltoGrid();
+    const [grid, setGrid] = useState([ ...Game()]);
+
+    const handleOnClick = move =>{
+        let tempGrid = Game(move);
+        setGrid(tempGrid);
+    };
 
     return (
         <div className="board">
-        {grid.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c} key={`${i}${ci}`}/>)}
-        </p> )}
+            {grid.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c} key={`${i}${ci}`}/>)}</p> )}
+            <button onClick={() => handleOnClick('DOWN')}>DOWN</button>
+            <button onClick={() => handleOnClick('LEFT')}>LEFT</button>
+            <button onClick={() => handleOnClick('RIGHT')}>RIGHT</button>
         </div>
     )
 };

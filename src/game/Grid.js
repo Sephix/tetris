@@ -1,45 +1,50 @@
 import {HEIGHT, WIDTH, BACKGROUND_COLOR} from "./settings";
 
 class Grid {
-
-    grid = [];
     livingCell = false;
-    cell = null;
 
     constructor(){
-        this.generateGrid();
+        this.grid = this.generateGrid();
+        this.deadGrid = this.generateGrid();
     }
 
-    incrementCellRow(){
-        this.cell.rowPos++;
-    }
-
-    renderCelltoGrid(){
+    renderCelltoGrid(Cell){
         if(this.livingCell){
-            let { cell, cellHeight, cellWidth, rowPos, colPos } = this.cell;
-            let nbRow = (cellHeight-1 > rowPos) ? rowPos+1 : cellHeight;
-            for (let i = 0; i < nbRow; i++){
-                for (let j = colPos; j < colPos + cellWidth; j++){
-                    this.grid[rowPos-i][j] = cell[cellHeight-1 - i][j - colPos];
+            let { cell, cellHeight, cellWidth, rowPos, colPos, isAlive } = Cell;
+            if (isAlive){
+                let nbRow = (cellHeight-1 > rowPos) ? rowPos+1 : cellHeight;
+                let tempGrid = this.generateGrid([]);
+                for (let i = 0; i < nbRow; i++){
+                    for (let j = colPos; j < colPos + cellWidth; j++){
+                        tempGrid[rowPos-i][j] = cell[cellHeight-1 - i][j - colPos];
+                    }
                 }
+                this.grid = tempGrid;
+            }
+            else {
+                this.deadGrid = this.grid;
             }
         }
     }
 
-    addingCell(cell){
-        if(!this.livingCell){
-            this.cell = cell;
-            this.livingCell = true;
-        }}
 
-    generateGrid(){
-        for (let i = this.grid.length; i < HEIGHT; i++){
+    addCell(){
+        if(!this.livingCell){
+            this.livingCell = true;
+        }
+    }
+
+    generateGrid(grid){
+        let tempGrid = [];
+        if(grid) tempGrid = [...grid];
+        for (let i = tempGrid.length; i < HEIGHT; i++){
             let row = [];
             for (let j = 0; j < WIDTH; j++){
                 row = [ ...row, BACKGROUND_COLOR];
             }
-            this.grid = [ ...this.grid, row];
+            tempGrid = [ ...tempGrid, row];
         }
+        return tempGrid;
     }
 
     handleRowDestruction(){
@@ -52,7 +57,7 @@ class Grid {
         lineToDestruct.reverse();
         lineToDestruct.forEach(line => tempGrid.splice(line,1));
         if (tempGrid !== this.grid) this.grid = tempGrid;
-        this.generateGrid();
+        Grid.generateGrid();
     }
 }
 

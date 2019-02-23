@@ -1,11 +1,14 @@
-import {BACKGROUND_COLOR, WIDTH} from "./settings";
+import {BACKGROUND_COLOR, WIDTH, HEIGHT} from "./settings";
 
 import * as Cells from "./cellCollection";
 
 class Cell{
-
     static previousCell = null;
+
     cell = null;
+    isAlive = true;
+    state;
+
     cellHeight = 0;
     cellWidth = 0;
     rowPos = -1;
@@ -16,7 +19,23 @@ class Cell{
         this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth));
     }
 
-    rotate(){
+    moveLeft(){
+        if (this.colPos !== 0 && this.isAlive){
+            this.colPos--;
+        }
+    }
+
+    moveRight(){
+        if (WIDTH - this.cellWidth > this.colPos && this.isAlive){
+            this.colPos++;
+        }
+    }
+
+    moveDown(){
+        if(HEIGHT - this.cellHeight >= this.rowPos){
+            this.rowPos += 1;
+        }
+        else this.isAlive = false;
     }
     findCellSize (){
         //Cell Height
