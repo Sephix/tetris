@@ -11,28 +11,34 @@ class Cell{
 
     cellHeight = 0;
     cellWidth = 0;
+    prevRow = -1;
     rowPos = -1;
 
     constructor (){
         this.randomCellSelection();
         this.findCellSize();
-        this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth));
+        this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth+1));
+        this.prevCol = this.colPos;
     }
 
     moveLeft(){
         if (this.colPos !== 0 && this.isAlive){
+            this.prevCol = this.colPos;
             this.colPos--;
         }
     }
 
     moveRight(){
         if (WIDTH - this.cellWidth > this.colPos && this.isAlive){
+            this.prevCol = this.colPos;
             this.colPos++;
         }
     }
 
     moveDown(){
-        if(HEIGHT - this.cellHeight >= this.rowPos){
+        console.log(this.rowPos);
+        if(HEIGHT-1> this.rowPos){
+            this.prevRow = this.rowPos;
             this.rowPos += 1;
         }
         else this.isAlive = false;

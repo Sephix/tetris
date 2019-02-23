@@ -12,7 +12,7 @@ const App = () => {
     return (
         <div className="board">
             {grid.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c} key={`${i}${ci}`}/>)}</p> )}
-            <button onClick={() => handleOnClick('DOWN')}>DOWN</button>
+            <button onKeyDown={() => handleOnClick('DOWN')}>DOWN</button>
             <button onClick={() => handleOnClick('LEFT')}>LEFT</button>
             <button onClick={() => handleOnClick('RIGHT')}>RIGHT</button>
         </div>
