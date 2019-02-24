@@ -4,27 +4,19 @@ class Grid {
     livingCell = false;
 
     constructor(){
-        let grid  = Grid.generateGrid([]);
-        this.grid = [...grid];
+        this.grid = Grid.generateGrid([]);
+        this.deadGrid = Grid.generateGrid([]);
     }
 
     renderCelltoGrid(Cell){
         if(this.livingCell){
             let { cell, cellHeight, cellWidth, rowPos, colPos, isAlive, prevRow, prevCol } = Cell;
             if (isAlive){
-                let nbRow = (cellHeight-1 > prevRow) ? prevRow+1 : cellHeight;
-                let tempGrid = this.grid;
-                for (let i = 0; i < nbRow; i++){
-                    for (let j = prevCol; j < prevCol + cellWidth; j++){
-                        if(tempGrid[prevRow-i][j] === cell[cellHeight-1 - i][j - prevCol]){
-                            tempGrid[prevRow-i][j] = BACKGROUND_COLOR;
-                        }
-                    }
-                }
-                nbRow = (cellHeight-1 > rowPos) ? rowPos+1 : cellHeight;
+                let tempGrid = this.deadGrid.map(r => r.map(c => c));
+                let nbRow = (cellHeight-1 > rowPos) ? rowPos+1 : cellHeight;
                 for (let i = 0; i < nbRow; i++){
                     for (let j = colPos; j < colPos + cellWidth; j++){
-                        if(tempGrid[rowPos-i][j] === BACKGROUND_COLOR){
+                        if(cell[cellHeight-1 - i][j - colPos] !== BACKGROUND_COLOR){
                             tempGrid[rowPos-i][j] = cell[cellHeight-1 - i][j - colPos];
                         }
                     }
@@ -32,7 +24,7 @@ class Grid {
                 this.grid = tempGrid;
             }
             else if (!isAlive) {
-                this.deadGrid = [...this.grid];
+                this.deadGrid = this.grid.map(r => r.map(c => c));
             }
         }
     }

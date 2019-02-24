@@ -21,28 +21,46 @@ class Cell{
         this.prevCol = this.colPos;
     }
 
-    moveLeft(){
-        if (this.colPos !== 0 && this.isAlive){
+    moveLeft(deadGrid){
+        if (!this.willCollide(deadGrid, this.rowPos, this.colPos-1)){
             this.prevCol = this.colPos;
             this.colPos--;
         }
     }
 
-    moveRight(){
-        if (WIDTH - this.cellWidth > this.colPos && this.isAlive){
+    moveRight(deadGrid){
+        if (!this.willCollide(deadGrid, this.rowPos, this.colPos+1)){
             this.prevCol = this.colPos;
             this.colPos++;
         }
     }
 
-    moveDown(){
-        console.log(this.rowPos);
-        if(HEIGHT-1> this.rowPos){
+    moveDown(deadGrid){
+        if (this.willCollide(deadGrid, this.rowPos+1, this.colPos)) {
+            this.isAlive = false;
+        }
+        else {
             this.prevRow = this.rowPos;
             this.rowPos += 1;
         }
-        else this.isAlive = false;
     }
+
+    willCollide(deadGrid, row, col){
+        if (WIDTH - this.cellWidth < col || col < 0 || row > 19)
+            return true;
+        let nbRow = (this.cellHeight-1 > row) ? row : this.cellHeight;
+        for (let i = 0; i < nbRow; i++){
+            for (let j = 0; j < this.cellWidth; j++){
+                if(deadGrid[row - i][col + j] !== BACKGROUND_COLOR &&
+                    this.cell[this.cellHeight-1 - i][j] !== BACKGROUND_COLOR){
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
     findCellSize (){
         //Cell Height
         for (let i = 0; i < 4; i++) {

@@ -9,13 +9,13 @@ export const Game = (move) => {
     if(!cell.isAlive) cell = new Cell();
     switch (move) {
         case 'DOWN':
-            cell.moveDown();
+            cell.moveDown(gameGrid.deadGrid);
             break;
         case 'RIGHT':
-            cell.moveRight();
+            cell.moveRight(gameGrid.deadGrid);
             break;
         case 'LEFT':
-            cell.moveLeft();
+            cell.moveLeft(gameGrid.deadGrid);
             break;
         default:
     }
