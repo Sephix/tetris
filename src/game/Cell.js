@@ -11,14 +11,12 @@ class Cell{
 
     cellHeight = 0;
     cellWidth = 0;
-    prevRow = -1;
     rowPos = -1;
 
     constructor (){
         this.randomCellSelection();
         this.findCellSize();
         this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth+1));
-        this.prevCol = this.colPos;
     }
 
     moveLeft(deadGrid){
@@ -45,8 +43,27 @@ class Cell{
         }
     }
 
+    rotate(deadGrid){
+        let newCell = [
+            ["white", "white", "white", "white"],
+            ["white", "white", "white", "white"],
+            ["white", "white", "white", "white"],
+            ["white", "white", "white", "white"]
+        ];
+        let tempCell = this.cell.map(r => r.map(sq => sq));
+
+        for(let i = this.cellHeight; i > 0; i--){
+            for(let j = this.cellWidth; j > 0; j--){
+                newCell[this.cellWidth- j][this.cellHeight - i] = tempCell[i-1][this.cellWidth - j];
+            }
+        }
+
+        this.cell = newCell.map(r => r.map(sq => sq));
+        this.findCellSize();
+    }
+
     willCollide(deadGrid, row, col){
-        if (WIDTH - this.cellWidth < col || col < 0 || row > 19)
+        if (WIDTH - this.cellWidth < col || col < 0 || row > HEIGHT-1)
             return true;
         let nbRow = (this.cellHeight-1 > row) ? row : this.cellHeight;
         for (let i = 0; i < nbRow; i++){

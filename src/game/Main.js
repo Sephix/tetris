@@ -6,7 +6,9 @@ let cell = new Cell();
 gameGrid.addCell();
 
 export const Game = (move) => {
-    if(!cell.isAlive) cell = new Cell();
+    if(!cell.isAlive) {
+        cell = new Cell();
+    }
     switch (move) {
         case 'DOWN':
             cell.moveDown(gameGrid.deadGrid);
@@ -17,9 +19,13 @@ export const Game = (move) => {
         case 'LEFT':
             cell.moveLeft(gameGrid.deadGrid);
             break;
+        case 'ROTATE':
+            cell.rotate(gameGrid.deadGrid);
+            break;
         default:
     }
     gameGrid.renderCelltoGrid(cell);
+    if(!cell.isAlive) gameGrid.handleRowDestruction();
     let { grid } = gameGrid;
     return [...grid];
 };

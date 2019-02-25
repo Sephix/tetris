@@ -10,7 +10,7 @@ class Grid {
 
     renderCelltoGrid(Cell){
         if(this.livingCell){
-            let { cell, cellHeight, cellWidth, rowPos, colPos, isAlive, prevRow, prevCol } = Cell;
+            let { cell, cellHeight, cellWidth, rowPos, colPos, isAlive} = Cell;
             if (isAlive){
                 let tempGrid = this.deadGrid.map(r => r.map(c => c));
                 let nbRow = (cellHeight-1 > rowPos) ? rowPos+1 : cellHeight;
@@ -36,19 +36,20 @@ class Grid {
     }
 
     static generateGrid(grid){
-        let genGrid = [...grid];
-        for (let i = genGrid.length; i < HEIGHT; i++){
+        let genGrid = [];
+            // grid.map(row => row.map(square => square));
+        for (let i = grid.length; i < HEIGHT; i++){
             let row = [];
             for (let j = 0; j < WIDTH; j++){
                 row = [ ...row, BACKGROUND_COLOR];
             }
             genGrid = [ ...genGrid, row];
         }
-        return genGrid;
+        return [...genGrid, ...grid];
     }
 
     handleRowDestruction(){
-        let tempGrid = this.grid;
+        let tempGrid = this.grid.map(row => row.map(square => square));
         const lineToDestruct = tempGrid.reduce((tab, row, index) => {
             const compute = row.filter((cell, index, row) => row && cell !== "white");
             if (compute.length === WIDTH) tab = [...tab, index];
@@ -57,7 +58,8 @@ class Grid {
         lineToDestruct.reverse();
         lineToDestruct.forEach(line => tempGrid.splice(line,1));
         if (tempGrid !== this.grid) this.grid = tempGrid;
-        Grid.generateGrid();
+        this.grid = Grid.generateGrid(this.grid).map(row => row.map(square => square));
+        this.deadGrid = this.grid;
     }
 }
 

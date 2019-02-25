@@ -15,6 +15,7 @@ const App = () => {
             <button onClick={() => handleOnClick('DOWN')}>DOWN</button>
             <button onClick={() => handleOnClick('LEFT')}>LEFT</button>
             <button onClick={() => handleOnClick('RIGHT')}>RIGHT</button>
+            <button onClick={() => handleOnClick('ROTATE')}>ROTATE</button>
         </div>
     )
 };
