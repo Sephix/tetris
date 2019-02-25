@@ -37,7 +37,6 @@ class Grid {
 
     static generateGrid(grid){
         let genGrid = [];
-            // grid.map(row => row.map(square => square));
         for (let i = grid.length; i < HEIGHT; i++){
             let row = [];
             for (let j = 0; j < WIDTH; j++){

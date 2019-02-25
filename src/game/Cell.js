@@ -57,9 +57,10 @@ class Cell{
                 newCell[this.cellWidth- j][this.cellHeight - i] = tempCell[i-1][this.cellWidth - j];
             }
         }
-
+        let currentCell = this.cell.map(r => r.map(sq => sq));
         this.cell = newCell.map(r => r.map(sq => sq));
         this.findCellSize();
+        if(this.willCollide(deadGrid, this.rowPos, this.colPos)) this.cell = currentCell;
     }
 
     willCollide(deadGrid, row, col){
