@@ -8,14 +8,16 @@ class Cell{
     cell = null;
     isAlive = true;
 
+
     cellHeight = 0;
     cellWidth = 0;
     rowPos = -1;
 
-    constructor (){
+    constructor (deadGrid = null){
         this.randomCellSelection();
         this.findCellSize();
         this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth+1));
+        if (deadGrid && this.willCollide(deadGrid, this.rowPos+1,this.colPos)) this.cell = null;
     }
 
     moveLeft(deadGrid){
@@ -59,7 +61,10 @@ class Cell{
         let currentCell = this.cell.map(r => r.map(sq => sq));
         this.cell = newCell.map(r => r.map(sq => sq));
         this.findCellSize();
-        if(this.willCollide(deadGrid, this.rowPos, this.colPos)) this.cell = currentCell;
+        if(this.willCollide(deadGrid, this.rowPos, this.colPos)){
+            this.cell = currentCell.map(r => r.map(sq => sq));
+            this.findCellSize();
+        }
     }
 
     willCollide(deadGrid, row, col){
