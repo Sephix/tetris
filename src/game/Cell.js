@@ -7,7 +7,6 @@ class Cell{
 
     cell = null;
     isAlive = true;
-    state;
 
     cellHeight = 0;
     cellWidth = 0;
