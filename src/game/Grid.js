@@ -2,14 +2,31 @@ import {HEIGHT, WIDTH, BACKGROUND_COLOR} from "./settings";
 
 class Grid {
     livingCell = false;
-
+    intScore = 0;
+    score = 0;
+    previousScore = 0;
+    level = 1;
     constructor(){
         this.grid = Grid.generateGrid([]);
         this.deadGrid = Grid.generateGrid([]);
+        this.lost = false;
+    }
+
+    setScore(n){
+        this.score += n * this.level;
+        this.intScore += n;
+        if (this.intScore > this.previousScore + 50){
+            this.level++;
+            this.previousScore += 50 + (this.intScore - (this.previousScore+50));
+        }
+    }
+
+    setLost(){
+        this.lost = true;
     }
 
     renderCelltoGrid(Cell){
-        if(this.livingCell){
+        if(this.livingCell && !this.lost){
             let { cell, cellHeight, cellWidth, rowPos, colPos, isAlive} = Cell;
             if (isAlive){
                 let tempGrid = this.deadGrid.map(r => r.map(c => c));
@@ -30,7 +47,7 @@ class Grid {
     }
 
     addCell(){
-        if(!this.livingCell){
+        if(!this.livingCell && !this.lost){
             this.livingCell = true;
         }
     }
@@ -55,6 +72,7 @@ class Grid {
             return tab;
         }, []);
         lineToDestruct.reverse();
+        this.setScore(lineToDestruct.length * lineToDestruct.length);
         lineToDestruct.forEach(line => tempGrid.splice(line,1));
         if (tempGrid !== this.grid) this.grid = tempGrid;
         this.grid = Grid.generateGrid(this.grid).map(row => row.map(square => square));

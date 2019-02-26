@@ -8,7 +8,6 @@ class Cell{
     cell = null;
     isAlive = true;
 
-
     cellHeight = 0;
     cellWidth = 0;
     rowPos = -1;
@@ -34,9 +33,10 @@ class Cell{
         }
     }
 
-    moveDown(deadGrid){
-        if (this.willCollide(deadGrid, this.rowPos+1, this.colPos)) {
+    moveDown(grid){
+        if (this.willCollide(grid.deadGrid, this.rowPos+1, this.colPos)) {
             this.isAlive = false;
+            if(this.rowPos < this.cellHeight-1) grid.setLost();
         }
         else {
             this.prevRow = this.rowPos;

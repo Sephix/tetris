@@ -3,15 +3,17 @@ import Cell from "../game/Cell";
 
 const gameGrid = new Grid();
 let cell = new Cell();
+let nextCell = new Cell();
+let savedCell = {cell :[[],[],[],[]]};
 gameGrid.addCell();
 
 let last = 0;
-let fps = 60;
 
 function mainLoop(timestamp){
+    let dif = gameGrid.level < 10 ? gameGrid.level*120 : 100;
     if(cell){
         let current = timestamp;
-        if(current - last > 1000){
+        if(current - last > 1200 - dif){
             Game('DOWN');
             last = current;
         }
@@ -23,13 +25,25 @@ export const start = () => requestAnimationFrame(mainLoop);
 
 export function Game(move){
     if(!cell.isAlive) {
-        cell = new Cell(gameGrid.deadGrid);
+        cell = nextCell;
+        nextCell = new Cell(gameGrid.deadGrid);
     }
     if(cell){
         switch (move) {
+            case 'a':
+                if (savedCell) {
+                    let tempCell = savedCell;
+                    savedCell = cell;
+                    cell = tempCell;
+                }
+                else {
+                    savedCell = cell;
+                    cell = new Cell(gameGrid.deadGrid);
+                }
+                break;
             case 's':
             case 'DOWN':
-                cell.moveDown(gameGrid.deadGrid);
+                cell.moveDown(gameGrid);
                 break;
             case 'd':
             case 'RIGHT':
@@ -48,6 +62,5 @@ export function Game(move){
     }
     gameGrid.renderCelltoGrid(cell);
     if(!cell.isAlive) gameGrid.handleRowDestruction();
-    let { grid } = gameGrid;
-    return [...grid];
+    return {...gameGrid, ...nextCell, savedCell };
 }
