@@ -1,11 +1,13 @@
 import Grid from '../game/Grid';
 import Cell from "../game/Cell";
+import {blank} from "./cellCollection";
 
 const gameGrid = new Grid();
 let cell = new Cell();
 let nextCell = new Cell();
-let savedCell = {cell :[["white", "white", "white", "white"],["white", "white", "white", "white"],["white", "white", "white", "white"],["white", "white", "white", "white"]]};
+let savedCell = {cell: blank};
 let isSavedCell = false;
+let isStarted = false;
 gameGrid.addCell();
 
 let last = 0;
@@ -22,14 +24,17 @@ function mainLoop(timestamp){
     }
 }
 
-export const start = () => requestAnimationFrame(mainLoop);
+export const start = () => {
+    requestAnimationFrame(mainLoop);
+    isStarted = true;
+};
 
 export function Game(move){
     if(!cell.isAlive) {
         cell = nextCell;
         nextCell = new Cell(gameGrid.deadGrid);
     }
-    if(cell){
+    if(cell && isStarted){
         switch (move) {
             case 'a':
                 if (isSavedCell) {
