@@ -102,6 +102,9 @@ class Cell{
         }
     }
 
+    resetRow(){
+        this.rowPos = -1;
+    }
     randomCellSelection (){
         let random = null;
         do {

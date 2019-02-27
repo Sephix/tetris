@@ -1,6 +1,9 @@
 import React,{useState, useEffect} from 'react';
 import { Game, start } from "../game/Main";
 
+import { Button, Container } from 'semantic-ui-react';
+import "semantic-ui-css/semantic.min.css";
+
 const App = () => {
     const [grid, setGrid] = useState([ ...Game().grid]);
     const [lost, setLost] = useState(Game().lost);
@@ -49,24 +52,31 @@ const App = () => {
     };
 
     return (
-        <div className="board" onKeyDown={handleKeyPress}>
-            {console.log(Game())}
-            {grid.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c} key={`${i}${ci}`}/>)}</p> )}
-            <button onClick={() => handleOnClick('DOWN')}>DOWN</button>
-            <button onClick={() => handleOnClick('LEFT')}>LEFT</button>
-            <button onClick={() => handleOnClick('RIGHT')}>RIGHT</button>
-            <button onClick={() => handleOnClick('ROTATE')}>ROTATE</button>
-            <button onClick={() => start()}>START</button>
-            <p>Level : {level}</p>
-            <p>Score : {score}</p>
-            <p>{lost ? "PERDU" : "En Cours..."}</p>
-            <p>
-                {nextCell.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c}/>)}</p> )}
-            </p>
-            <p>
-                {savedCell.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c}/>)}</p> )}
-            </p>
-        </div>
+        <>
+            <div className="game" onKeyDown={handleKeyPress}>
+                <div className="left-content">
+                    {savedCell.map((r,i) => <p>{ r.map( (c, ci) => <b className={c}/>)}</p> )}
+                </div>
+                <div className="centered">
+                    {grid.map((r,i) => <p key={`r${i}`}>{ r.map( (c, ci) => <b className={c} key={`${i}${ci}`}/>)}</p> )}
+                </div>
+                <div className="right">
+                    <div className="next-cell">
+                        {nextCell.map(r =><p>{ r.map(sq => <b className={sq}/>)}</p>)}<br/>
+                    </div>
+                    Level : {level}<br/>
+                    Score : {score}<br/>
+                    {lost ? "PERDU" : "En Cours..."}<br/>
+                    <button onClick={() => start()}>START GAME</button>
+                </div>
+            </div>
+            <div>
+                <Button circular icon="angle left" size="massive" onClick={() => handleOnClick('LEFT')} />
+                <Button circular icon="angle down" size="massive" onClick={() => handleOnClick('DOWN')} />
+                <Button circular icon="angle right" size="massive" onClick={() => handleOnClick('RIGHT')} />
+                <Button circular icon="sync alternate" size="massive" onClick={() => handleOnClick('ROTATE')} />
+            </div>
+        </>
     )
 };
 

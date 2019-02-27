@@ -25,6 +25,10 @@ class Grid {
         this.lost = true;
     }
 
+    wipeActiveGrid(){
+        this.grid = this.deadGrid.map(r => r.map(c => c));
+    }
+
     renderCelltoGrid(Cell){
         if(this.livingCell && !this.lost){
             let { cell, cellHeight, cellWidth, rowPos, colPos, isAlive} = Cell;

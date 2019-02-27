@@ -4,7 +4,8 @@ import Cell from "../game/Cell";
 const gameGrid = new Grid();
 let cell = new Cell();
 let nextCell = new Cell();
-let savedCell = {cell :[[],[],[],[]]};
+let savedCell = {cell :[["white", "white", "white", "white"],["white", "white", "white", "white"],["white", "white", "white", "white"],["white", "white", "white", "white"]]};
+let isSavedCell = false;
 gameGrid.addCell();
 
 let last = 0;
@@ -31,14 +32,18 @@ export function Game(move){
     if(cell){
         switch (move) {
             case 'a':
-                if (savedCell) {
+                if (isSavedCell) {
                     let tempCell = savedCell;
                     savedCell = cell;
                     cell = tempCell;
+                    savedCell.resetRow();
                 }
                 else {
+                    gameGrid.wipeActiveGrid();
                     savedCell = cell;
+                    savedCell.resetRow();
                     cell = new Cell(gameGrid.deadGrid);
+                    isSavedCell = true;
                 }
                 break;
             case 's':
