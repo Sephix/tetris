@@ -1,0 +1,16 @@
+{
+  "main.css": "/tetris/static/css/main.9f02f25d.chunk.css",
+  "main.js": "/tetris/static/js/main.f6d59f90.chunk.js",
+  "main.js.map": "/tetris/static/js/main.f6d59f90.chunk.js.map",
+  "runtime~main.js": "/tetris/static/js/runtime~main.18d269b3.js",
+  "runtime~main.js.map": "/tetris/static/js/runtime~main.18d269b3.js.map",
+  "static/css/2.a77eb190.chunk.css": "/tetris/static/css/2.a77eb190.chunk.css",
+  "static/js/2.cd83e6d0.chunk.js": "/tetris/static/js/2.cd83e6d0.chunk.js",
+  "static/js/2.cd83e6d0.chunk.js.map": "/tetris/static/js/2.cd83e6d0.chunk.js.map",
+  "index.html": "/tetris/index.html",
+  "precache-manifest.ac3c4c58429ec4d5ac4fae7d1c3eb5ac.js": "/tetris/precache-manifest.ac3c4c58429ec4d5ac4fae7d1c3eb5ac.js",
+  "service-worker.js": "/tetris/service-worker.js",
+  "static/css/2.a77eb190.chunk.css.map": "/tetris/static/css/2.a77eb190.chunk.css.map",
+  "static/css/main.9f02f25d.chunk.css.map": "/tetris/static/css/main.9f02f25d.chunk.css.map",
+  "static/media/semantic.min.css": "/tetris/static/media/outline-icons.ef60a4f6.woff"
+}
