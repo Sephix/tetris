@@ -1,7 +1,6 @@
 import React,{useState, useEffect} from 'react';
 import { Game, start } from "../game/Main";
 
-import { Button } from 'semantic-ui-react';
 import "semantic-ui-css/semantic.min.css";
 
 const App = () => {
@@ -13,39 +12,58 @@ const App = () => {
     const [savedCell, setSavedCell] = useState(Game().savedCell.cell);
     const game = move => Game(move);
 
-    //Next Cell
+    //Mouse down events
+    let mousedownID = -1;  //Global ID of mouse down interval
+
+    const handleOnMouseDown = (e,move) => {
+        game(move);
+        if(mousedownID===-1)  //Prevent multimple loops!
+            mousedownID = setInterval(() => whilemousedown(move), 100 /*execute every 100ms*/);
+    };
+
+    function mouseup(event) {
+        if(mousedownID!==-1) {  //Only stop if exists
+            clearInterval(mousedownID);
+            mousedownID=-1;
+        }
+
+    }
+    function whilemousedown(move){
+        game(move);
+    }
+
+//Assign events
+    document.addEventListener("mouseup", mouseup);
+//Also clear the interval when user leaves the window with mouse
+    document.addEventListener("mouseout", mouseup);
+    document.addEventListener("touchleave", mouseup);
+    document.addEventListener("touchcancel", mouseup);
+    document.addEventListener("touchend", mouseup);
+
+    //Saved Cell
     useEffect(() =>{
         setSavedCell(Game().savedCell.cell);
     }, [Game().savedCell.cell]);
-
     //Next Cell
     useEffect(() =>{
         setNextCell(Game().cell);
     }, [Game().cell]);
-
     //Level
     useEffect(() =>{
         setLevel(game().level);
     }, [game().level]);
-
     //Grid
     useEffect(() =>{
         setGrid(game().grid);
     }, [game().grid]);
-
     //Lost
     useEffect(() =>{
         setLost(game().lost);
     }, [game().lost]);
-
     //Score
     useEffect(() =>{
         setScore(game().score);
     }, [game().score]);
-
-    const handleOnClick = move =>{
-        game(move);
-    };
 
     const handleKeyPress = e =>{
         game(e.key);
@@ -68,20 +86,40 @@ const App = () => {
                         Level : {level}<br/>
                         Score : {score}<br/>
                         {lost ? "PERDU" : "En Cours..."}<br/>
-                        <Button color="teal" onClick={() => start()}>START GAME</Button>
+                        <button color="teal" onClick={() => start()}>START GAME</button>
                     </div>
                 </div>
                 <div className="controls">
                     <div className="ui centered grid">
                         <div className="two column column centered row">
-                            <div className="column center aligned"><Button circular inverted color="orange" icon="save outline" size="massive" onClick={() => handleOnClick('a')} /></div>
-                            <div className="column center aligned"><Button circular inverted color="purple" icon="redo" size="massive" onClick={() => handleOnClick('ROTATE')} /></div>
+                            <div className="column center aligned">
+                                <span className="video-game-button" onMouseDown={() => game('a')}>
+                                    A-Save
+                                </span>
+                            </div>
+                            <div className="column center aligned">
+                                <span className="video-game-button" onMouseDown={() => game('ROTATE')}>
+                                    Z-Rotate
+                                </span>
+                            </div>
                         </div>
                         <div className="two column column centered row">
-                            <div className="column center aligned"><Button circular inverted color="teal" icon="angle left" size="massive" onClick={() => handleOnClick('LEFT')} /></div>
-                            <div className="column center aligned"><Button circular inverted color="teal" icon="angle right" size="massive" onClick={() => handleOnClick('RIGHT')} /></div>
+                            <div className="column center aligned">
+                                <span className="video-game-button" onTouchStart={(e) => handleOnMouseDown(e,'LEFT')}>
+                                    Q-Left
+                                </span>
+                            </div>
+                            <div className="column center aligned">
+                                <span className="video-game-button" onTouchStart={(e) => handleOnMouseDown(e,'RIGHT')}>
+                                    D-Right
+                                </span>
+                            </div>
                         </div>
-                        <Button circular inverted color="red" icon="angle down" size="massive" onMouseDown={() => handleOnClick('DOWN')} />
+                        <div className="center aligned">
+                                <span className="video-game-button" onTouchStart={(e) => handleOnMouseDown(e,'DOWN')}>
+                            S-Down
+                        </span>
+                        </div>
                     </div>
                 </div>
             </div>

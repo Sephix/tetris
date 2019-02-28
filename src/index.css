@@ -7,6 +7,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-color: #002f6c;
     font-size: 1.55vh;
+    user-select: none;
 }
 
 #root{
@@ -80,6 +81,29 @@ div b {
     height: 1.50em;
     margin-right: 0.075em;
     display: inline-block;
+}
+
+.video-game-button {
+    -webkit-tap-highlight-color:  rgba(255, 255, 255, 0);
+    line-height: 5em;
+    text-align: center;
+    display: inline-block;
+    width: 5em;
+    border-radius: 3em;
+    background-color: #002f6c;
+    box-shadow:  0 .35em #160a4b;
+    color: black;
+    margin: 5px;
+    background-image: linear-gradient(to right bottom, #052eff 3%, #001bdb 22%, #000680 99%);
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.video-game-button:active {
+    user-select: none;
+    box-shadow: none;
+    position: relative;
+    top: .2em;
 }
 
 .white {
