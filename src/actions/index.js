@@ -1,12 +1,20 @@
-export const gameInput= (input) => {
+export const refreshGrid= (grid) => {
     return {
-        type: 'INPUT',
-        payload: input
+        type: 'REFRESH_GRID',
+        payload: grid
     }
 };
 
-export const startGame = () => {
-  return {
-      type: 'START'
-  };
+export const refreshNextCell= (cell) => {
+    return {
+        type: 'REFRESH_NEXT_CELL',
+        payload: cell
+    }
+};
+
+export const refreshSavedCell= (cell) => {
+    return {
+        type: 'REFRESH_SAVED_CELL',
+        payload: cell
+    }
 };

@@ -1,16 +1,23 @@
 import React from 'react';
-import {blank} from "../game/cellCollection";
 import Grid from "../assets/Grid";
 import { connect } from "react-redux";
-import { startGame } from "../actions";
+import { start } from "../loop";
 
-const RightInfo = ({ startGame }) => {
-    return(
-        <div className="right-info">
-            <Grid grid={blank} id="R"/>
-            <button onClick={startGame}>START GAME</button>
-        </div>
-    )
+class RightInfo extends React.Component{
+
+    render() {
+        const { nextCell } = this.props;
+        return(
+            <div className="right-info">
+                <Grid grid={nextCell} id="R"/>
+                <button onClick={() => start()}>START GAME</button>
+            </div>
+        )
+    }
+}
+const mapStateToProps = ({nextCell}) =>{
+    return {
+        nextCell
+    }
 };
-
-export default connect(null, { startGame })(RightInfo);
+export default connect(mapStateToProps)(RightInfo);

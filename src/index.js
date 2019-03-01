@@ -8,7 +8,7 @@ import './index.css';
 import Layout from './components/Layout';
 import reducers from './reducers';
 
-const store = createStore(reducers);
+export const store = createStore(reducers);
 
 ReactDom.render(
     <Provider store={store}>

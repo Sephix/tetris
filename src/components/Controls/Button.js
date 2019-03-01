@@ -1,6 +1,4 @@
 import React from 'react';
-import { connect } from "react-redux";
-import { gameInput } from "../../actions";
 
 //Gobal states
 let mousedownID = -1;
@@ -17,7 +15,7 @@ const Button = ({children, type, input, gameInput}) => {
 
     const handleButtonPress = (e, input) =>{
         if(type === "single"){
-            gameInput(input);
+
         }
         else{
             if(!listeners){
@@ -27,9 +25,9 @@ const Button = ({children, type, input, gameInput}) => {
                 document.addEventListener("touchcancel", mouseUp);
                 document.addEventListener("touchend", mouseUp);
             }
-            gameInput(input);
+
             if(mousedownID===-1)  //Prevent multiple loops!
-            mousedownID = setInterval(() =>gameInput(input), 100);
+            mousedownID = setInterval(() => console.log("here"), 100);
         }
     };
 
@@ -40,4 +38,4 @@ const Button = ({children, type, input, gameInput}) => {
     )
 };
 
-export default connect( null, { gameInput })(Button);
+export default Button;

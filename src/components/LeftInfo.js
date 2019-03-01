@@ -1,13 +1,22 @@
 import React from 'react';
-import {blank} from "../game/cellCollection";
 import Grid from "../assets/Grid";
+import {connect} from "react-redux";
 
-const LeftInfo = () => {
-    return(
-        <div className="left-info">
-            <Grid grid={blank} id="G"/>
-        </div>
-    )
+class LeftInfo extends React.Component{
+
+    render() {
+        const { savedCell } = this.props;
+        return(
+            <div className="left-info">
+                <Grid grid={savedCell} id="G"/>
+            </div>
+        )
+    }
+}
+
+const mapStateToProps = ({savedCell}) =>{
+    return {
+        savedCell
+    }
 };
-
-export default LeftInfo;
+export default connect(mapStateToProps)(LeftInfo);

@@ -1,7 +1,11 @@
 import { combineReducers } from "redux";
 
-import gameReducer from './gameReducer';
+import gridReducer from './gridReducer';
+import nextCellReducer from './nextCellReducer';
+import savedCellReducer from './savedCellReducer';
 
 export default combineReducers({
-    game: gameReducer
+    grid: gridReducer,
+    nextCell: nextCellReducer,
+    savedCell: savedCellReducer
 });

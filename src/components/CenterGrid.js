@@ -6,19 +6,18 @@ import {connect} from "react-redux";
 class CenterGrid extends React.Component{
 
     render() {
-        console.log(this.props);
+        const { grid } = this.props;
         return (
             <div className="centeredgame">
-                <Grid grid={GAME_BLANK} id="C"/>
-                <button onClick={() => console.log(this.props)}>clic</button>
+                <Grid grid={grid} id="C"/>
             </div>
         )
     }
 }
 
-const mapStateToProps = (state) =>{
+const mapStateToProps = ({grid}) =>{
    return {
-        grid: state.game.loop()
+       grid
    }
 };
 export default connect(mapStateToProps)(CenterGrid);
