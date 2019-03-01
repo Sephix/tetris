@@ -13,8 +13,39 @@ let isSavedCell = false;
 let isStarted = false;
 gameGrid.addCell();
 
-let last = 0;
+let keyPressedId = -1;
+let lastKeyPressed = null;
+function handleKeyPress(e){
+    if(e.key === 'a' || e.key === 'z' || e.key === 'q' || e.key === 's' || e.key === 'd' ) {
+        if (e.key !== lastKeyPressed) {
+            handleKeyUp();
+        }
+        if (keyPressedId === -1) {
+            lastKeyPressed = e.key;
+            if(e.key !== 'a' && e.key !== 'z' ){
+                game(e.key);
+                keyPressedId = setInterval(() => game(e.key), 90);
+            }else {
+                lastKeyPressed = e.key;
+                game(e.key);
+                keyPressedId = 0;
+            }
+        }
+    }
+}
+function handleKeyUp() {
+    if(keyPressedId!==-1) {  //Only stop if exists
+        clearTimeout(keyPressedId);
+        keyPressedId=-1;
+    }
+}
+const events = () => {
+    document.onkeypress = handleKeyPress;
+    document.onkeyup = handleKeyUp;
+};
 
+
+let last = 0;
 const loop = (timestamp) =>{
     let dif = gameGrid.level < 10 ? gameGrid.level*120 : 100;
     if(cell){
@@ -29,6 +60,7 @@ const loop = (timestamp) =>{
 
 export const start = () => {
     isStarted = true;
+    events();
     requestAnimationFrame(loop);
 };
 

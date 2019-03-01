@@ -3,8 +3,9 @@ import React from 'react';
 //Gobal states
 let mousedownID = -1;
 let listeners = false;
+let inputType = null;
 
-const Button = ({children, type, input, gameInput}) => {
+const Button = ({children, type, input, action}) => {
 
     const mouseUp = (event) => {
         if(mousedownID!==-1) {  //Only stop if exists
@@ -14,10 +15,11 @@ const Button = ({children, type, input, gameInput}) => {
     };
 
     const handleButtonPress = (e, input) =>{
+        if(inputType === null ) inputType = e.type;
         if(type === "single"){
-
+            if (e.type === inputType) action(input);
         }
-        else{
+        else if(type === "repeat"){
             if(!listeners){
                 document.addEventListener("mouseup", mouseUp);
                 document.addEventListener("mouseout", mouseUp);
@@ -25,9 +27,9 @@ const Button = ({children, type, input, gameInput}) => {
                 document.addEventListener("touchcancel", mouseUp);
                 document.addEventListener("touchend", mouseUp);
             }
-
+            if (e.type === inputType) action(input);
             if(mousedownID===-1)  //Prevent multiple loops!
-            mousedownID = setInterval(() => console.log("here"), 100);
+                mousedownID = setInterval(() => action(input), 100);
         }
     };
 

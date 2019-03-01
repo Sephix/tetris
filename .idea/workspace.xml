@@ -2,20 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f061ef6-cfce-4f34-8935-de24d3bc0489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reducers/gridReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/nextCellReducer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reducers/savedCellReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/actions/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CenterGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CenterGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Controls/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Controls/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Controls/Controls.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RightInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RightInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/gameReducer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,13 +31,34 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Layout.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+            <state relative-caret-position="67">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="24" column="59" lean-forward="true" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1064">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,10 +67,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/loop/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1221">
-              <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="728">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
+                <element signature="n#!!block;n#handleKeyPress#0" />
+                <element signature="n#!!block;n#handleKeyUp#0" />
+                <element signature="e#1207#1215#0" />
+                <element signature="e#448#708#0" />
+                <element signature="e#738#796#0" />
               </folding>
             </state>
           </provider>
@@ -107,7 +124,6 @@
         <option value="$PROJECT_DIR$/src/game/settings.js" />
         <option value="$PROJECT_DIR$/src/components/Grid.js" />
         <option value="$PROJECT_DIR$/src/components/Controls.js" />
-        <option value="$PROJECT_DIR$/src/components/Controls/Controls.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
         <option value="$PROJECT_DIR$/src/reducers/inputReducer.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
@@ -117,17 +133,18 @@
         <option value="$PROJECT_DIR$/src/game/Main.js" />
         <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/gridReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/Controls/Button.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/reducers/savedCellReducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/nextCellReducer.js" />
-        <option value="$PROJECT_DIR$/src/loop/index.js" />
         <option value="$PROJECT_DIR$/src/components/CenterGrid.js" />
         <option value="$PROJECT_DIR$/src/components/RightInfo.js" />
         <option value="$PROJECT_DIR$/src/components/LeftInfo.js" />
         <option value="$PROJECT_DIR$/src/keyboardInput.js" />
+        <option value="$PROJECT_DIR$/src/loop/index.js" />
         <option value="$PROJECT_DIR$/src/components/Layout.js" />
+        <option value="$PROJECT_DIR$/src/components/Controls/Controls.js" />
+        <option value="$PROJECT_DIR$/src/components/Controls/Button.js" />
       </list>
     </option>
   </component>
@@ -158,6 +175,13 @@
               <item name="newtetris" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Controls" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
@@ -311,11 +335,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551474041289</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="redux grid, next cell, saved cell and input implemented">
+      <created>1551480438666</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1551480438666</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="112140000" />
+    <option name="totallyTimeSpent" value="115287000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
@@ -378,7 +409,8 @@
     <MESSAGE value="lost, level, and time scaled implemented&#10;next cell displayed&#10;started work for saved cell" />
     <MESSAGE value="Base app done, starting redux" />
     <MESSAGE value="Redux progress, refactoring Main game" />
-    <option name="LAST_COMMIT_MESSAGE" value="Redux progress, refactoring Main game" />
+    <MESSAGE value="redux grid, next cell, saved cell and input implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="redux grid, next cell, saved cell and input implemented" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -441,16 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-521">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Controls/CenterGrid.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -484,13 +506,6 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="29" column="61" selection-start-line="29" selection-start-column="61" selection-end-line="29" selection-end-column="61" />
         </state>
       </provider>
     </entry>
@@ -552,16 +567,6 @@
     <entry file="file://$PROJECT_DIR$/src/keyboardInput.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LeftInfo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -586,21 +591,53 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/loop/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1221">
-          <caret line="21" column="32" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="728">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
+            <element signature="n#!!block;n#handleKeyPress#0" />
+            <element signature="n#!!block;n#handleKeyUp#0" />
+            <element signature="e#1207#1215#0" />
+            <element signature="e#448#708#0" />
+            <element signature="e#738#796#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
+        <state relative-caret-position="67">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1064">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="24" column="59" lean-forward="true" selection-start-line="24" selection-start-column="59" selection-end-line="24" selection-end-column="59" />
         </state>
       </provider>
     </entry>
