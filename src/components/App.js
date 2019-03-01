@@ -23,9 +23,8 @@ const App = (props) => {
     //Mouse down events
     const handleOnMouseDown = (e,move) => {
         game(move);
-        if(mousedownID===-1)  //Prevent multimple loops!
-            console.log(e);
-        mousedownID = setInterval(() => whilemousedown(move), 100);
+        if(mousedownID===-1)  //Prevent multiple loops!
+        mousedownID = setInterval(() => whileMouseDown(move), 100);
     };
     function mouseup(event) {
         if(mousedownID!==-1) {  //Only stop if exists
@@ -33,10 +32,12 @@ const App = (props) => {
             mousedownID=-1;
         }
     }
-    function whilemousedown(move) {
+    function whileMouseDown(move) {
         game(move);
     }
     //</editor-fold>
+
+    //<editor-fold desc="KeyPress handlers">
     function handleKeyPress(e){
         if(e.key === 'a' || e.key === 'z' || e.key === 'q' || e.key === 's' || e.key === 'd' ) {
             if (e.key !== lastKeyPressed) {
@@ -46,7 +47,7 @@ const App = (props) => {
                 lastKeyPressed = e.key;
                 if(e.key !== 'a' && e.key !== 'z' ){
                     game(e.key);
-                    keyPressedId = setInterval(() => game(e.key), 75);
+                    keyPressedId = setInterval(() => game(e.key), 100);
                 }else {
                     lastKeyPressed = e.key;
                     game(e.key);
@@ -62,7 +63,9 @@ const App = (props) => {
             keyPressedId=-1;
         }
     }
-//<editor-fold desc="Event listener">
+    //</editor-fold>
+
+    //<editor-fold desc="Event listener">
 //event for keypress
     document.onkeypress = handleKeyPress;
     document.onkeyup = handleKeyUp;
@@ -74,32 +77,32 @@ const App = (props) => {
     document.addEventListener("touchend", mouseup);
 //</editor-fold>
 
-//<editor-fold desc="Hooks !">
-//Saved Cell
-    useEffect(() =>{
-        setSavedCell(Game().savedCell.cell);
-    }, [Game().savedCell.cell]);
-//Next Cell
-    useEffect(() =>{
-        setNextCell(Game().cell);
-    }, [Game().cell]);
-//Level
-    useEffect(() =>{
-        setLevel(game().level);
-    }, [game().level]);
-//Grid
-    useEffect(() =>{
-        setGrid(game().grid);
-    }, [game().grid]);
-//Lost
-    useEffect(() =>{
-        setLost(game().lost);
-    }, [game().lost]);
-//Score
-    useEffect(() =>{
-        setScore(game().score);
-    }, [game().score]);
-//</editor-fold>
+    //<editor-fold desc="Hooks! useEffect">
+    //Saved Cell
+        useEffect(() =>{
+            setSavedCell(Game().savedCell.cell);
+        }, [Game().savedCell.cell]);
+    //Next Cell
+        useEffect(() =>{
+            setNextCell(Game().cell);
+        }, [Game().cell]);
+    //Level
+        useEffect(() =>{
+            setLevel(game().level);
+        }, [game().level]);
+    //Grid
+        useEffect(() =>{
+            setGrid(game().grid);
+        }, [game().grid]);
+    //Lost
+        useEffect(() =>{
+            setLost(game().lost);
+        }, [game().lost]);
+    //Score
+        useEffect(() =>{
+            setScore(game().score);
+        }, [game().score]);
+    //</editor-fold>
 
     return (
         <>
