@@ -1,17 +1,18 @@
 import React from 'react';
-import Grid from "./Grid";
-import {blank} from "../game/cellCollection";
-import {GAME_BLANK} from "../game/settings";
+
+import LeftInfo from "./LeftInfo";
+import RightInfo from "./RightInfo";
 import Controls from "./Controls/Controls";
+import CenterGrid from "./CenterGrid";
 
 const Layout = () => {
 
     return (
         <div className="game">
             <div className="game-grid">
-                <Grid className="left-info" grid={blank} id="G"/>
-                <Grid className="centeredgame" grid={GAME_BLANK} id="G"/>
-                <Grid className="left-info" grid={blank} id="G"/>
+                <LeftInfo/>
+                <CenterGrid/>
+                <RightInfo/>
             </div>
             <Controls/>
         </div>

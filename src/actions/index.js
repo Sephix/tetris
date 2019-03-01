@@ -4,3 +4,9 @@ export const gameInput= (input) => {
         payload: input
     }
 };
+
+export const startGame = () => {
+  return {
+      type: 'START'
+  };
+};

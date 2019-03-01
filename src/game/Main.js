@@ -17,7 +17,7 @@ function mainLoop(timestamp){
     if(cell){
         let current = timestamp;
         if(current - last > 1200 - dif){
-            Game('DOWN');
+            loop('DOWN');
             last = current;
         }
         requestAnimationFrame(mainLoop);
@@ -29,12 +29,12 @@ export const start = () => {
     isStarted = true;
 };
 
-export function Game(move){
-    if(!cell.isAlive) {
+export const loop = (move) => {
+    if (!cell.isAlive) {
         cell = nextCell;
         nextCell = new Cell(gameGrid.deadGrid);
     }
-    if(cell && isStarted){
+    if (cell && isStarted) {
         switch (move) {
             case 'a':
                 if (isSavedCell) {
@@ -42,8 +42,7 @@ export function Game(move){
                     savedCell = cell;
                     cell = tempCell;
                     savedCell.resetRow();
-                }
-                else {
+                } else {
                     gameGrid.wipeActiveGrid();
                     savedCell = cell;
                     savedCell.resetRow();
@@ -71,6 +70,6 @@ export function Game(move){
         }
     }
     gameGrid.renderCelltoGrid(cell);
-    if(!cell.isAlive) gameGrid.handleRowDestruction();
-    return {...gameGrid, ...nextCell, savedCell };
-}
+    if (!cell.isAlive) gameGrid.handleRowDestruction();
+    return {...gameGrid, ...nextCell, savedCell};
+};
