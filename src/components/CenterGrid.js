@@ -7,9 +7,7 @@ class CenterGrid extends React.Component{
     render() {
         const { grid } = this.props;
         return (
-            <div className="centeredgame">
-                <Grid grid={grid} id="C"/>
-            </div>
+                <Grid className="centeredgame" grid={grid} id="C"/>
         )
     }
 }

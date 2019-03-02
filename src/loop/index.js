@@ -108,7 +108,6 @@ export const reset = () => {
     store.dispatch(gameRestart());
 };
 
-
 const game = (move) => {
     if (!cell.isAlive) {
         cell = nextCell;

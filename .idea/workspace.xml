@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f061ef6-cfce-4f34-8935-de24d3bc0489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/App.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/CenterGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CenterGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Controls/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Controls/Controls.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/LeftInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/RightInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/RightInfo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,21 +24,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="803">
-              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="70" selection-end-column="35" />
-              <folding>
-                <element signature="e#0#48#0" expanded="true" />
-                <element signature="e#4289#6240#0" />
-              </folding>
+            <state relative-caret-position="56">
+              <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -47,10 +33,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+            <state relative-caret-position="280">
+              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
               <folding>
                 <element signature="e#0#25#0" expanded="true" />
+                <element signature="e#185#1941#0" />
+                <element signature="e#599#816#0" />
+                <element signature="e#837#1061#0" />
+                <element signature="e#1143#1360#0" />
+                <element signature="e#1381#1599#0" />
+                <element signature="e#1681#1899#0" />
+                <element signature="e#1732#1843#0" />
               </folding>
             </state>
           </provider>
@@ -71,8 +64,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/CenterGrid.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="12" selection-start-column="12" selection-end-column="12" />
+            <state relative-caret-position="224">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/assets/Grid.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="112">
+              <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -80,8 +85,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/RightInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="392">
               <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="196">
+              <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
               </folding>
@@ -92,10 +109,28 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/components/LeftInfo.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+            <state relative-caret-position="252">
+              <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
               <folding>
                 <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/loop/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="431">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+              <folding>
+                <element signature="n#!!block;n#handleKeyPress#0" />
+                <element signature="n#!!block;n#handleKeyUp#0" />
+                <element signature="e#1318#1399#0" />
+                <element signature="e#1444#1717#0" />
+                <element signature="e#1747#1984#0" />
+                <element signature="e#2015#2285#0" />
+                <element signature="e#2315#2556#0" />
               </folding>
             </state>
           </provider>
@@ -133,7 +168,6 @@
         <option value="$PROJECT_DIR$/src/components/Controls.js" />
         <option value="$PROJECT_DIR$/src/reducers/inputReducer.js" />
         <option value="$PROJECT_DIR$/src/components/App.js" />
-        <option value="$PROJECT_DIR$/src/assets/Grid.js" />
         <option value="$PROJECT_DIR$/src/components/Controls/CenterGrid.js" />
         <option value="$PROJECT_DIR$/src/reducers/gameReducer.js" />
         <option value="$PROJECT_DIR$/src/game/Main.js" />
@@ -150,13 +184,14 @@
         <option value="$PROJECT_DIR$/src/reducers/gameScoreReducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/index.js" />
         <option value="$PROJECT_DIR$/src/actions/index.js" />
-        <option value="$PROJECT_DIR$/src/loop/index.js" />
         <option value="$PROJECT_DIR$/src/components/RightInfo.js" />
         <option value="$PROJECT_DIR$/src/components/LeftInfo.js" />
-        <option value="$PROJECT_DIR$/src/components/CenterGrid.js" />
         <option value="$PROJECT_DIR$/src/components/Layout.js" />
         <option value="$PROJECT_DIR$/public/style.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/loop/index.js" />
+        <option value="$PROJECT_DIR$/src/components/CenterGrid.js" />
+        <option value="$PROJECT_DIR$/src/assets/Grid.js" />
         <option value="$PROJECT_DIR$/src/components/Controls/Controls.js" />
         <option value="$PROJECT_DIR$/src/index.css" />
       </list>
@@ -183,18 +218,13 @@
             <path>
               <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
               <item name="newtetris" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
               <item name="newtetris" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
@@ -208,18 +238,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
               <item name="Controls" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="loop" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -290,7 +308,9 @@
       <workItem from="1551263227537" duration="643000" />
       <workItem from="1551273303727" duration="6714000" />
       <workItem from="1551522450486" duration="9507000" />
-      <workItem from="1551533846511" duration="5117000" />
+      <workItem from="1551533846511" duration="5454000" />
+      <workItem from="1551539597260" duration="323000" />
+      <workItem from="1551548229050" duration="5229000" />
     </task>
     <task id="LOCAL-00001" summary="Set up css">
       <created>1550861488820</created>
@@ -397,11 +417,18 @@
       <option name="project" value="LOCAL" />
       <updated>1551532584326</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="new build">
+      <created>1551539020707</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1551539020707</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="130037000" />
+    <option name="totallyTimeSpent" value="135926000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="32" width="1936" height="1056" extended-state="6" />
@@ -420,7 +447,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32968238" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996369" weight="0.20178372" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996369" visible="true" weight="0.20178372" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003631" side_tool="true" weight="0.32951945" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32968238" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -468,7 +495,8 @@
     <MESSAGE value="game working in redux, need improvement (css and cleanup)" />
     <MESSAGE value="start, pause, reset implemented" />
     <MESSAGE value="level and score displayed" />
-    <option name="LAST_COMMIT_MESSAGE" value="level and score displayed" />
+    <MESSAGE value="new build" />
+    <option name="LAST_COMMIT_MESSAGE" value="new build" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/.gitignore">
@@ -530,27 +558,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/gameReducer.js" />
     <entry file="file://$PROJECT_DIR$/src/keyboardInput.js" />
-    <entry file="file://$PROJECT_DIR$/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="10" column="7" selection-start-line="10" selection-start-column="7" selection-end-line="10" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-493">
           <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
@@ -608,22 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loop/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="23" column="22" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="22" />
-          <folding>
-            <element signature="n#!!block;n#handleKeyPress#0" />
-            <element signature="n#!!block;n#handleKeyUp#0" />
-            <element signature="e#1413#1686#0" />
-            <element signature="e#1716#1953#0" />
-            <element signature="e#1984#2254#0" />
-            <element signature="e#2284#2525#0" />
-            <element signature="e#2552#4167#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/gameScoreReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -638,33 +633,6 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/LeftInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="50" lean-forward="true" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/RightInfo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CenterGrid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="12" selection-start-column="12" selection-end-column="12" />
         </state>
       </provider>
     </entry>
@@ -685,6 +653,140 @@
     <entry file="file://$PROJECT_DIR$/public/style.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/App.js" />
+    <entry file="uml://JavaScript-modules-diagram/C:/Users/michael/WebstormProjects/newtetris/src/index.js">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JavaScript-modules-diagram</ID>
+          <OriginalElement>$PROJECT_DIR$/src/index.js</OriginalElement>
+          <nodes>
+            <node x="365.0" y="-28.0">$PROJECT_DIR$/src/components/Layout.js</node>
+            <node x="408.0" y="110.0">$PROJECT_DIR$/src/index.css</node>
+            <node x="5.0" y="-7.0">$PROJECT_DIR$/node_modules/redux/index.d.ts#createStore#10714;</node>
+            <node x="-141.0" y="121.0">$PROJECT_DIR$/node_modules/react-redux/es/index.js#Provider#7;</node>
+            <node x="99.0" y="396.0">$PROJECT_DIR$/src/reducers/index.js</node>
+            <node x="-68.0" y="291.0">$PROJECT_DIR$/node_modules/react/index.js</node>
+            <node x="417.0" y="252.0">$PROJECT_DIR$/node_modules/react-dom/index.js</node>
+            <node x="140.0" y="103.0">$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;</node>
+            <node x="336.0" y="364.0">$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/components/Layout.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/index.css">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/react-dom/index.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/react-redux/es/index.js#Provider#7;">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/react/index.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/redux/index.d.ts#createStore#10714;">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/reducers/index.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="1.0" x="-307.0" y="125.0" />
+          <SelectedNodes>
+            <node>$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>All</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>Details</VISIBILITY>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/RightInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="196">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/LeftInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="11" column="50" selection-start-line="11" selection-start-column="50" selection-end-line="11" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loop/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="431">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+          <folding>
+            <element signature="n#!!block;n#handleKeyPress#0" />
+            <element signature="n#!!block;n#handleKeyUp#0" />
+            <element signature="e#1318#1399#0" />
+            <element signature="e#1444#1717#0" />
+            <element signature="e#1747#1984#0" />
+            <element signature="e#2015#2285#0" />
+            <element signature="e#2315#2556#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/Grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CenterGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Layout.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -695,38 +797,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="64" selection-start-line="4" selection-start-column="64" selection-end-line="4" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="803">
-          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="70" selection-end-column="35" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-            <element signature="e#4289#6240#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="29" column="28" selection-start-line="29" selection-start-column="28" selection-end-line="29" selection-end-column="28" />
+        <state relative-caret-position="280">
+          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
           <folding>
             <element signature="e#0#25#0" expanded="true" />
+            <element signature="e#185#1941#0" />
+            <element signature="e#599#816#0" />
+            <element signature="e#837#1061#0" />
+            <element signature="e#1143#1360#0" />
+            <element signature="e#1381#1599#0" />
+            <element signature="e#1681#1899#0" />
+            <element signature="e#1732#1843#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="72" column="10" selection-start-line="72" selection-start-column="10" selection-end-line="72" selection-end-column="10" />
+        <state relative-caret-position="56">
+          <caret line="29" column="18" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
         </state>
       </provider>
     </entry>
