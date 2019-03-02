@@ -1,23 +1,28 @@
 import React from 'react';
-import Grid from "../assets/Grid";
 import { connect } from "react-redux";
 
 class RightInfo extends React.Component{
 
     render() {
-        const { nextCell, gameLevel, gameScore } = this.props;
+        const { gameState, gameLevel, gameScore } = this.props;
         return(
             <div className="right-info">
-                <Grid grid={nextCell} id="R"/>
-                <p>Level: {gameLevel}</p>
-                <p>Score: {gameScore}<br/></p>
+                <div>
+                    {gameState === '' ? 'Appuyer sur Start' : gameState}
+                </div>
+                <div>
+                    Level: {gameLevel}
+                </div>
+                <div>
+                    Score: {gameScore}
+                </div>
             </div>
         )
     }
 }
-const mapStateToProps = ({ nextCell, gameLevel, gameScore }) =>{
+const mapStateToProps = ({ gameState, gameLevel, gameScore }) =>{
     return {
-        nextCell,
+        gameState,
         gameLevel,
         gameScore
     }

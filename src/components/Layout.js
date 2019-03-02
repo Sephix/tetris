@@ -8,12 +8,14 @@ const Layout = () => {
 
     return (
         <div className="game">
-            <div className="game-grid">
-                <LeftInfo/>
-                <CenterGrid/>
-                <RightInfo/>
+            <div className="game-box">
+                <div className="game-grid">
+                    <LeftInfo/>
+                    <CenterGrid/>
+                    <RightInfo/>
+                </div>
+                <Controls/>
             </div>
-            <Controls/>
         </div>
     )
 };
