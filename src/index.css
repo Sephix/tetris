@@ -40,13 +40,13 @@ div .game-grid *{
     flex-shrink: 0;
 }
 
-div .game-grid .left-info{
+div .game-grid .right-info{
     flex-shrink: 0;
     flex-grow: 1;
     width: 6.5em;
 }
 
-div .game-grid .right-info{
+div .game-grid .left-info{
     padding-bottom: 5em;
     flex-shrink: 0;
     flex-grow: 1;

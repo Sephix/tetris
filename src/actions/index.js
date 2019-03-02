@@ -5,7 +5,7 @@ import {
     GAME_LOST,
     GAME_STARTED,
     GAME_PAUSED,
-    GAME_RESTARTED
+    GAME_RESTARTED, GAME_SCORE, GAME_LEVEL
 } from "./types";
 
 export const refreshGrid = (grid) => {
@@ -53,3 +53,16 @@ export const gameRestart = () => {
     }
 };
 
+export const gameScore = (score) => {
+    return {
+        type: GAME_SCORE,
+        payload: score
+    }
+};
+
+export const gameLevel = (level) => {
+    return {
+        type: GAME_LEVEL,
+        payload: level
+    }
+};

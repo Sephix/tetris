@@ -9,9 +9,12 @@ import {
     gameStarted,
     gameLost,
     gamePaused,
-    gameRestart
+    gameRestart,
+    gameScore,
+    gameLevel
 } from "../actions";
 import { store } from "../index";
+
 
 let gameGrid = new Grid();
 let cell = new Cell();
@@ -79,14 +82,16 @@ export const start = () => {
 };
 
 export const paused = () => {
-    if(isPaused){
-        isPaused = false;
-        requestAnimationFrame(loop);
-        store.dispatch(gameStarted());
-    }
-    else {
-        isPaused = true;
-        store.dispatch(gamePaused());
+    if(isStarted){
+        if(isPaused){
+            isPaused = false;
+            requestAnimationFrame(loop);
+            store.dispatch(gameStarted());
+        }
+        else {
+            isPaused = true;
+            store.dispatch(gamePaused());
+        }
     }
 };
 
@@ -149,7 +154,11 @@ const game = (move) => {
         }
     }
     gameGrid.renderCelltoGrid(cell);
-    if (!cell.isAlive) gameGrid.handleRowDestruction();
+    if (!cell.isAlive) {
+        gameGrid.handleRowDestruction();
+        store.dispatch(gameScore(gameGrid.score));
+        store.dispatch(gameLevel(gameGrid.level));
+    }
     store.dispatch(refreshGrid(gameGrid.grid));
     if(gameGrid.lost) store.dispatch(gameLost());
 };

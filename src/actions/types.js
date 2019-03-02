@@ -11,3 +11,7 @@ export const GAME_LOST = 'GAME_LOST';
 export const GAME_PAUSED = 'GAME_PAUSED';
 
 export const GAME_RESTARTED = 'GAME_RESTARTED';
+
+export const GAME_LEVEL = 'GAME_LEVEL';
+
+export const GAME_SCORE = 'GAME_SCORE';
