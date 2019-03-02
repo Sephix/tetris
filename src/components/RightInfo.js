@@ -1,23 +1,27 @@
 import React from 'react';
 import Grid from "../assets/Grid";
 import { connect } from "react-redux";
-import { start } from "../loop";
+import { start, paused, reset } from "../loop";
 
 class RightInfo extends React.Component{
 
     render() {
-        const { nextCell } = this.props;
+        const { nextCell, gameState } = this.props;
         return(
             <div className="right-info">
                 <Grid grid={nextCell} id="R"/>
-                <button onClick={() => start()}>START GAME</button>
+                {gameState === '' ? 'Appuyer sur Start' : gameState}
+                <span className="start-btn" onClick={() => start()}>START</span>
+                <span className="start-btn" onClick={() => paused()}>PAUSE</span>
+                <span className="start-btn" onClick={() => reset()}>RESET</span>
             </div>
         )
     }
 }
-const mapStateToProps = ({nextCell}) =>{
+const mapStateToProps = ({nextCell, gameState}) =>{
     return {
-        nextCell
+        nextCell,
+        gameState
     }
 };
 export default connect(mapStateToProps)(RightInfo);
