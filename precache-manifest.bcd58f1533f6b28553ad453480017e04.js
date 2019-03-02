@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/tetris/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "f6d59f904ce9f48790c9",
-    "url": "/tetris/static/css/main.9f02f25d.chunk.css"
+    "revision": "13e711021aac8eb366ee",
+    "url": "/tetris/static/css/main.35daa53d.chunk.css"
   },
   {
     "revision": "18d269b309cd4e2e4f13",
@@ -16,8 +16,8 @@ self.__precacheManifest = [
     "url": "/tetris/static/media/brand-icons.a1a749e8.svg"
   },
   {
-    "revision": "cd83e6d00885dbaebbe2",
-    "url": "/tetris/static/js/2.cd83e6d0.chunk.js"
+    "revision": "c4ca2f696a83226b9323",
+    "url": "/tetris/static/js/2.c4ca2f69.chunk.js"
   },
   {
     "revision": "cd6c777f1945164224dee082abaea03a",
@@ -28,6 +28,10 @@ self.__precacheManifest = [
     "url": "/tetris/static/media/outline-icons.ef60a4f6.woff"
   },
   {
+    "revision": "9c74e172f87984c48ddf5c8108cabe67",
+    "url": "/tetris/static/media/flags.9c74e172.png"
+  },
+  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/tetris/static/media/outline-icons.701ae6ab.eot"
   },
@@ -36,16 +40,12 @@ self.__precacheManifest = [
     "url": "/tetris/static/media/outline-icons.ad97afd3.ttf"
   },
   {
-    "revision": "9c74e172f87984c48ddf5c8108cabe67",
-    "url": "/tetris/static/media/flags.9c74e172.png"
-  },
-  {
     "revision": "0ab54153eeeca0ce03978cc463b257f7",
     "url": "/tetris/static/media/icons.0ab54153.woff2"
   },
   {
-    "revision": "f6d59f904ce9f48790c9",
-    "url": "/tetris/static/js/main.f6d59f90.chunk.js"
+    "revision": "13e711021aac8eb366ee",
+    "url": "/tetris/static/js/main.13e71102.chunk.js"
   },
   {
     "revision": "e8c322de9658cbeb8a774b6624167c2c",
@@ -80,11 +80,11 @@ self.__precacheManifest = [
     "url": "/tetris/static/media/icons.962a1bf3.svg"
   },
   {
-    "revision": "cd83e6d00885dbaebbe2",
+    "revision": "c4ca2f696a83226b9323",
     "url": "/tetris/static/css/2.a77eb190.chunk.css"
   },
   {
-    "revision": "da90eaecf91d2bdaa6b1e9ace6507b74",
+    "revision": "a66e77e3010d0cb05dbd4b761aaa7ba5",
     "url": "/tetris/index.html"
   }
 ];
