@@ -46,6 +46,7 @@ div .game-grid{
 
 .centeredgame{
     padding-left: 0.25em;
+    padding-right: 0.25em;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;

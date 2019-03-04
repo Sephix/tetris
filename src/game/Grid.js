@@ -68,6 +68,32 @@ class Grid {
         return [...genGrid, ...grid];
     }
 
+    shouldGridDestruct(){
+        let tempGrid = this.grid.map(row => row.map(square => square));
+        const lineToDestruct = tempGrid.reduce((tab, row, index) => {
+            const compute = row.filter((cell, index, row) => row && cell !== "white");
+            if (compute.length === WIDTH) tab = [...tab, index];
+            return tab;
+        }, []);
+        return lineToDestruct.length > 0;
+    }
+
+    getTempGrid(){
+        let tempGrid = this.grid.map(row => row.map(square => square));
+        let row = [];
+        for (let j = 0; j < WIDTH; j++){
+            row = [ ...row, BACKGROUND_COLOR];
+        }
+        const lineToDestruct = tempGrid.reduce((tab, row, index) => {
+            const compute = row.filter((cell, index, row) => row && cell !== "white");
+            if (compute.length === WIDTH) tab = [...tab, index];
+            return tab;
+        }, []);
+        lineToDestruct.reverse();
+        lineToDestruct.forEach(line => tempGrid[line] = row);
+        return tempGrid;
+    }
+
     handleRowDestruction(){
         let tempGrid = this.grid.map(row => row.map(square => square));
         const lineToDestruct = tempGrid.reduce((tab, row, index) => {

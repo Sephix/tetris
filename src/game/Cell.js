@@ -45,12 +45,7 @@ class Cell{
     }
 
     rotate(deadGrid){
-        let newCell = [
-            ["white", "white", "white", "white"],
-            ["white", "white", "white", "white"],
-            ["white", "white", "white", "white"],
-            ["white", "white", "white", "white"]
-        ];
+        let newCell = Cells.blank.map(r => r.map(sq => sq));
         let tempCell = this.cell.map(r => r.map(sq => sq));
 
         for(let i = this.cellHeight; i > 0; i--){
@@ -61,6 +56,12 @@ class Cell{
         let currentCell = this.cell.map(r => r.map(sq => sq));
         this.cell = newCell.map(r => r.map(sq => sq));
         this.findCellSize();
+        for(let i = 0; i < this.cellWidth; i++){
+            if(!this.willCollide(deadGrid, this.rowPos, this.colPos-i)){
+                this.colPos -= i;
+                break;
+            }
+        }
         if(this.willCollide(deadGrid, this.rowPos, this.colPos)){
             this.cell = currentCell.map(r => r.map(sq => sq));
             this.findCellSize();

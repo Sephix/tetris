@@ -23,6 +23,7 @@ let savedCell = {cell: blank};
 let isSavedCell = false;
 let isStarted = false;
 let isPaused = false;
+let anim = false;
 gameGrid.addCell();
 
 let keyPressedId = -1;
@@ -59,14 +60,16 @@ const events = () => {
 
 let last = 0;
 const loop = (timestamp) =>{
-    let dif = gameGrid.level < 10 ? gameGrid.level*120 : 100;
+    let dif = gameGrid.level < 10 ? gameGrid.level*120 : 1080;
     if(cell && !isPaused){
         let current = timestamp;
         if(current - last > 1200 - dif){
             game('DOWN');
             last = current;
         }
-        requestAnimationFrame(loop);
+        if(!anim){
+            requestAnimationFrame(loop);
+        }
     }
 };
 
@@ -114,7 +117,7 @@ const game = (move) => {
         nextCell = new Cell(gameGrid.deadGrid);
         store.dispatch(refreshNextCell(nextCell.cell));
     }
-    if (cell && isStarted && !isPaused && !gameGrid.lost) {
+    if (cell && isStarted && !isPaused && !gameGrid.lost && !anim) {
         switch (move) {
             case 'a':
                 if (isSavedCell) {
@@ -154,12 +157,37 @@ const game = (move) => {
     }
     gameGrid.renderCelltoGrid(cell);
     if (!cell.isAlive) {
-        gameGrid.handleRowDestruction();
-        store.dispatch(gameScore(gameGrid.score));
-        store.dispatch(gameLevel(gameGrid.level));
+        if(gameGrid.shouldGridDestruct()) {
+            requestAnimationFrame(handleAnimation);
+            anim = true;
+        }
     }
     store.dispatch(refreshGrid(gameGrid.grid));
     if(gameGrid.lost) store.dispatch(gameLost());
+};
+
+let count = 0;
+let lastAnim = 0;
+const handleAnimation = (timestamp) => {
+    let currentFrame = timestamp;
+    let tempGrid = gameGrid.getTempGrid();
+    if(count < 7 && currentFrame - lastAnim >= 100){
+        if(count % 2 !== 0 && count < 6) store.dispatch(refreshGrid(tempGrid));
+        else if (count < 6) store.dispatch(refreshGrid(gameGrid.grid));
+        lastAnim = currentFrame;
+        count++;
+        requestAnimationFrame(handleAnimation);
+    }else if (count >= 7){
+        gameGrid.handleRowDestruction();
+        store.dispatch(refreshGrid(gameGrid.grid));
+        store.dispatch(gameScore(gameGrid.score));
+        store.dispatch(gameLevel(gameGrid.level));
+        count = 0;
+        anim = false;
+        requestAnimationFrame(loop);
+    }else if (count < 7){
+        requestAnimationFrame(handleAnimation);
+    }
 };
 
 export default game;
