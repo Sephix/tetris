@@ -2,6 +2,8 @@ import Grid from '../game/Grid';
 import Cell from "../game/Cell";
 import {blank} from "./../game/cellCollection";
 
+import { rowDestruction } from "./animations/rowDestruction";
+
 import {
     refreshGrid,
     refreshNextCell,
@@ -14,6 +16,7 @@ import {
     gameLevel
 } from "../actions";
 import { store } from "../index";
+import {fillGrid} from "./animations/fillGrid";
 
 
 let gameGrid = new Grid();
@@ -23,8 +26,12 @@ let savedCell = {cell: blank};
 let isSavedCell = false;
 let isStarted = false;
 let isPaused = false;
-let anim = false;
 gameGrid.addCell();
+
+let anim = false;
+export const setAnim = (value) =>{
+    anim = value;
+};
 
 let keyPressedId = -1;
 let lastKeyPressed = null;
@@ -61,16 +68,17 @@ const events = () => {
 let last = 0;
 const loop = (timestamp) =>{
     let dif = gameGrid.level < 10 ? gameGrid.level*120 : 1080;
-    if(cell && !isPaused){
+    if(cell && !isPaused && !anim){
         let current = timestamp;
         if(current - last > 1200 - dif){
             game('DOWN');
             last = current;
         }
-        if(!anim){
             requestAnimationFrame(loop);
-        }
     }
+};
+export const setLoop = () =>{
+    requestAnimationFrame(loop);
 };
 
 export const start = () => {
@@ -158,35 +166,14 @@ const game = (move) => {
     gameGrid.renderCelltoGrid(cell);
     if (!cell.isAlive) {
         if(gameGrid.shouldGridDestruct()) {
-            requestAnimationFrame(handleAnimation);
+            rowDestruction(gameGrid.getTempGrid(),gameGrid);
             anim = true;
         }
     }
     store.dispatch(refreshGrid(gameGrid.grid));
-    if(gameGrid.lost) store.dispatch(gameLost());
-};
-
-let count = 0;
-let lastAnim = 0;
-const handleAnimation = (timestamp) => {
-    let currentFrame = timestamp;
-    let tempGrid = gameGrid.getTempGrid();
-    if(count < 7 && currentFrame - lastAnim >= 100){
-        if(count % 2 !== 0 && count < 6) store.dispatch(refreshGrid(tempGrid));
-        else if (count < 6) store.dispatch(refreshGrid(gameGrid.grid));
-        lastAnim = currentFrame;
-        count++;
-        requestAnimationFrame(handleAnimation);
-    }else if (count >= 7){
-        gameGrid.handleRowDestruction();
-        store.dispatch(refreshGrid(gameGrid.grid));
-        store.dispatch(gameScore(gameGrid.score));
-        store.dispatch(gameLevel(gameGrid.level));
-        count = 0;
-        anim = false;
-        requestAnimationFrame(loop);
-    }else if (count < 7){
-        requestAnimationFrame(handleAnimation);
+    if(gameGrid.lost) {
+        store.dispatch(gameLost());
+        fillGrid(gameGrid.grid);
     }
 };
 

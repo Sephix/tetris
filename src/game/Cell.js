@@ -5,7 +5,7 @@ import * as Cells from "./cellCollection";
 class Cell{
     static previousCell = null;
 
-    cell = null;
+    cell = [[]];
     isAlive = true;
 
     cellHeight = 0;

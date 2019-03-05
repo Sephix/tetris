@@ -167,6 +167,12 @@ div b {
 .white {
     background-color: aliceblue;
 }
+
+.black{
+    background-color: #111111;
+    outline: 0.075em solid #DDDDDD;
+    outline-offset: -3px;
+}
 .green {
     background-color: #2ECC40;
     outline: 0.075em solid #DDDDDD;
