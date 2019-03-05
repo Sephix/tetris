@@ -1,26 +1,26 @@
 import {store} from "../../index";
 import { refreshGrid } from "../../actions";
 
-import {HEIGHT, WIDTH} from "../../game/settings";
+import {BACKGROUND_COLOR, HEIGHT, WIDTH} from "../../game/settings";
 import {incrementSequence} from "./lostAnimation";
 
-const cell = "black";
+const cell = BACKGROUND_COLOR;
 
-export const fillGrid = (gameGrid) =>{
+export const emptyGrid = (gameGrid) =>{
     let tempGrid = gameGrid;
-    let row = HEIGHT-1;
     let lastAnim = 0;
+    let row = 0;
     const fillGridAnimation = (timestamp) => {
         let currentFrame = timestamp;
-        if(row >= 0) {
+        if(row < HEIGHT) {
             if (currentFrame - lastAnim > 0){
                 lastAnim = currentFrame;
                 for(let i = 0; i < WIDTH; i++){
                     tempGrid[row][i] = cell;
                 }
                 store.dispatch(refreshGrid(tempGrid));
-                row--;
-                if (row === -1) incrementSequence();
+                row++;
+                if( row === HEIGHT ) incrementSequence();
             }
             requestAnimationFrame(fillGridAnimation);
         }

@@ -16,7 +16,7 @@ import {
     gameLevel
 } from "../actions";
 import { store } from "../index";
-import {fillGrid} from "./animations/fillGrid";
+import {lostAnimation} from "./animations/lostAnimation";
 
 
 let gameGrid = new Grid();
@@ -68,13 +68,13 @@ const events = () => {
 let last = 0;
 const loop = (timestamp) =>{
     let dif = gameGrid.level < 10 ? gameGrid.level*120 : 1080;
-    if(cell && !isPaused && !anim){
+    if(cell && !isPaused && !anim && !gameGrid.lost){
         let current = timestamp;
         if(current - last > 1200 - dif){
             game('DOWN');
             last = current;
         }
-            requestAnimationFrame(loop);
+        requestAnimationFrame(loop);
     }
 };
 export const setLoop = () =>{
@@ -120,60 +120,62 @@ export const reset = () => {
 };
 
 const game = (move) => {
-    if (!cell.isAlive) {
-        cell = nextCell;
-        nextCell = new Cell(gameGrid.deadGrid);
-        store.dispatch(refreshNextCell(nextCell.cell));
-    }
-    if (cell && isStarted && !isPaused && !gameGrid.lost && !anim) {
-        switch (move) {
-            case 'a':
-                if (isSavedCell) {
-                    let tempCell = savedCell;
-                    savedCell = cell;
-                    cell = tempCell;
-                    savedCell.resetRow();
-                } else {
-                    gameGrid.wipeActiveGrid();
-                    savedCell = cell;
-                    savedCell.resetRow();
-                    cell = nextCell;
-                    nextCell = new Cell();
-                    isSavedCell = true;
-                    store.dispatch(refreshNextCell(nextCell.cell));
-                }
-                store.dispatch(refreshSavedCell(savedCell.cell));
-                break;
-            case 's':
-            case 'DOWN':
-                cell.moveDown(gameGrid);
-                break;
-            case 'd':
-            case 'RIGHT':
-                cell.moveRight(gameGrid.deadGrid);
-                break;
-            case 'q':
-            case 'LEFT':
-                cell.moveLeft(gameGrid.deadGrid);
-                break;
-            case 'z':
-            case 'ROTATE':
-                cell.rotate(gameGrid.deadGrid);
-                break;
-            default:
+    if (!gameGrid.lost && isStarted && !isPaused && !gameGrid.lost && !anim) {
+        if (!cell.isAlive) {
+            cell = nextCell;
+            nextCell = new Cell(gameGrid.deadGrid);
+            store.dispatch(refreshNextCell(nextCell.cell));
         }
-    }
-    gameGrid.renderCelltoGrid(cell);
-    if (!cell.isAlive) {
-        if(gameGrid.shouldGridDestruct()) {
-            rowDestruction(gameGrid.getTempGrid(),gameGrid);
-            anim = true;
+        if (cell) {
+            switch (move) {
+                case 'a':
+                    if (isSavedCell) {
+                        let tempCell = savedCell;
+                        savedCell = cell;
+                        cell = tempCell;
+                        savedCell.resetRow();
+                    } else {
+                        gameGrid.wipeActiveGrid();
+                        savedCell = cell;
+                        savedCell.resetRow();
+                        cell = nextCell;
+                        nextCell = new Cell();
+                        isSavedCell = true;
+                        store.dispatch(refreshNextCell(nextCell.cell));
+                    }
+                    store.dispatch(refreshSavedCell(savedCell.cell));
+                    break;
+                case 's':
+                case 'DOWN':
+                    cell.moveDown(gameGrid);
+                    break;
+                case 'd':
+                case 'RIGHT':
+                    cell.moveRight(gameGrid.deadGrid);
+                    break;
+                case 'q':
+                case 'LEFT':
+                    cell.moveLeft(gameGrid.deadGrid);
+                    break;
+                case 'z':
+                case 'ROTATE':
+                    cell.rotate(gameGrid.deadGrid);
+                    break;
+                default:
+            }
         }
-    }
-    store.dispatch(refreshGrid(gameGrid.grid));
-    if(gameGrid.lost) {
-        store.dispatch(gameLost());
-        fillGrid(gameGrid.grid);
+        if (gameGrid.lost) {
+            store.dispatch(gameLost());
+            lostAnimation(gameGrid.grid);
+        }
+        gameGrid.renderCelltoGrid(cell);
+        if (!cell.isAlive) {
+            if (gameGrid.shouldGridDestruct()) {
+                rowDestruction(gameGrid.getTempGrid(), gameGrid);
+                anim = true;
+            }
+        }
+        store.dispatch(refreshGrid(gameGrid.grid));
     }
 };
 
