@@ -12,11 +12,10 @@ class Cell{
     cellWidth = 0;
     rowPos = -1;
 
-    constructor (deadGrid = null){
+    constructor (){
         this.randomCellSelection();
         this.findCellSize();
         this.colPos = Math.floor(Math.random() * (WIDTH - this.cellWidth+1));
-        if (deadGrid && this.willCollide(deadGrid, this.rowPos+1,this.colPos)) this.cell = null;
     }
 
     moveLeft(deadGrid){
@@ -76,15 +75,6 @@ class Cell{
             for (let j = 0; j < this.cellWidth; j++){
                 if(deadGrid[row - i][col + j] !== BACKGROUND_COLOR &&
                     this.cell[this.cellHeight-1 - i][j] !== BACKGROUND_COLOR){
-                    return true;
-                }
-            }
-        }
-        if(row === -1) {
-            console.log(nbRow);
-            for (let j = 0; j < this.cellWidth; j++){
-                if(deadGrid[0][col + j] !== BACKGROUND_COLOR &&
-                    this.cell[this.cellHeight-1][j] !== BACKGROUND_COLOR){
                     return true;
                 }
             }

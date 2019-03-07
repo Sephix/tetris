@@ -18,7 +18,7 @@ export const game = (move) => {
         if (!gameState.gameGrid.lost && !gameState.isPaused && !gameState.gameGrid.lost && !anim) {
             if (!gameState.cell.isAlive && !gameState.gameGrid.lost) {
                 gameState.cell = gameState.nextCell;
-                gameState.nextCell = new Cell(gameState.gameGrid.deadGrid);
+                gameState.nextCell = new Cell();
                 store.dispatch(refreshNextCell(gameState.nextCell.cell));
             }
             if (gameState.cell) {
