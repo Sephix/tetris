@@ -5,7 +5,7 @@ let mousedownID = -1;
 let listeners = false;
 let inputType = null;
 
-const Button = ({children, type, input, action}) => {
+const Button = ({children, type, input, action, id}) => {
 
     const mouseUp = (event) => {
         if(mousedownID!==-1) {  //Only stop if exists
@@ -34,7 +34,7 @@ const Button = ({children, type, input, action}) => {
     };
 
     return(
-        <span className="video-game-button" onTouchStart={(e) => handleButtonPress(e, input)} onMouseDown={(e) => handleButtonPress(e, input)}>
+        <span id={id} className="video-game-button" onTouchStart={(e) => handleButtonPress(e, input)} onMouseDown={(e) => handleButtonPress(e, input)}>
             {children}
         </span>
     )

@@ -1,4 +1,7 @@
 import React from 'react';
+
+import './layout.css';
+
 import LeftInfo from "./LeftInfo";
 import RightInfo from "./RightInfo";
 import Controls from "./Controls/Controls";

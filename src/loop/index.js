@@ -1,74 +1,53 @@
-import Grid from '../game/Grid';
+import Grid from "../game/Grid";
 import Cell from "../game/Cell";
-import {blank} from "./../game/cellCollection";
+import {blank} from "../game/cellCollection";
 
-import { rowDestruction } from "./animations/rowDestruction";
+import {store} from "../index";
+import {gamePaused, gameRestart, gameStarted, refreshNextCell} from "../actions";
 
-import {
-    refreshGrid,
-    refreshNextCell,
-    refreshSavedCell,
-    gameStarted,
-    gameLost,
-    gamePaused,
-    gameRestart,
-    gameScore,
-    gameLevel
-} from "../actions";
-import { store } from "../index";
-import {lostAnimation} from "./animations/lostAnimation";
+import {game} from "./actions";
+import {events} from "./keybind";
+import {fillInFillOut} from "./animations/fillInFillOut";
 
+//Contains all essential variables in an object
+export const gameState = {
+    gameGrid: null,
+    cell: null,
+    nextCell: null,
+    isSavedCell: null,
+    isStarted: null,
+    isPaused: null
+};
+//Set initial values
+const setInitValues = () => {
+    gameState.gameGrid = new Grid();
+    gameState.cell = new Cell();
+    gameState.nextCell = new Cell();
+    gameState.savedCell = {cell: blank};
+    gameState.isSavedCell = false;
+    gameState.isStarted = false;
+    gameState.isPaused = false;
+    gameState.gameGrid.addCell();
+};
 
-let gameGrid = new Grid();
-let cell = new Cell();
-let nextCell = new Cell();
-let savedCell = {cell: blank};
-let isSavedCell = false;
-let isStarted = false;
-let isPaused = false;
-gameGrid.addCell();
+//Reset the game
+export const reset = () => {
+    setInitValues();
+    store.dispatch(gameRestart());
+    fillInFillOut(gameState.gameGrid.grid, anim, setAnim);
+};
 
-let anim = false;
+//Animation variable, set to true if there is an animation running
+export let anim = false;
 export const setAnim = (value) =>{
     anim = value;
 };
 
-let keyPressedId = -1;
-let lastKeyPressed = null;
-function handleKeyPress(e){
-    if(e.key === 'a' || e.key === 'z' || e.key === 'q' || e.key === 's' || e.key === 'd' ) {
-        if (e.key !== lastKeyPressed) {
-            handleKeyUp();
-        }
-        if (keyPressedId === -1) {
-            lastKeyPressed = e.key;
-            if(e.key !== 'a' && e.key !== 'z' ){
-                game(e.key);
-                keyPressedId = setInterval(() => game(e.key), 90);
-            }else {
-                lastKeyPressed = e.key;
-                game(e.key);
-                keyPressedId = 0;
-            }
-        }
-    }
-}
-function handleKeyUp() {
-    if(keyPressedId!==-1) {  //Only stop if exists
-        clearTimeout(keyPressedId);
-        keyPressedId=-1;
-    }
-}
-const events = () => {
-    document.onkeypress = handleKeyPress;
-    document.onkeyup = handleKeyUp;
-};
-
-
+//Main game loop, move down current cell based on current level
 let last = 0;
 const loop = (timestamp) =>{
-    let dif = gameGrid.level < 10 ? gameGrid.level*120 : 1080;
-    if(cell && !isPaused && !anim && !gameGrid.lost){
+    let dif = gameState.gameGrid.level < 10 ? gameState.gameGrid.level*120 : 1080;
+    if(gameState.cell && !gameState.isPaused && !anim && !gameState.gameGrid.lost){
         let current = timestamp;
         if(current - last > 1200 - dif){
             game('DOWN');
@@ -77,106 +56,35 @@ const loop = (timestamp) =>{
         requestAnimationFrame(loop);
     }
 };
+//Starts game loop
 export const setLoop = () =>{
     requestAnimationFrame(loop);
 };
 
+//Start sequence function, resume if paused
 export const start = () => {
-    if(!isStarted){
-        isStarted = true;
-        store.dispatch(refreshNextCell(nextCell.cell));
+    if(!gameState.isStarted){
+        setInitValues();
+        gameState.isStarted = true;
+        store.dispatch(refreshNextCell(gameState.nextCell.cell));
         store.dispatch(gameStarted());
         events();
         requestAnimationFrame(loop);
     }
-    else if(isPaused) paused();
+    else if(gameState.isPaused) paused();
 };
 
+//Set game to pause or resume if paused
 export const paused = () => {
-    if(isStarted){
-        if(isPaused){
-            isPaused = false;
+    if(gameState.isStarted){
+        if(gameState.isPaused){
+            gameState.isPaused = false;
             requestAnimationFrame(loop);
             store.dispatch(gameStarted());
         }
         else {
-            isPaused = true;
+            gameState.isPaused = true;
             store.dispatch(gamePaused());
         }
     }
 };
-
-export const reset = () => {
-    gameGrid = new Grid();
-    cell = new Cell();
-    nextCell = new Cell();
-    savedCell = {cell: blank};
-    isSavedCell = false;
-    isStarted = false;
-    isPaused = false;
-    gameGrid.addCell();
-
-    store.dispatch(gameRestart());
-};
-
-const game = (move) => {
-    if (!gameGrid.lost && isStarted && !isPaused && !gameGrid.lost && !anim) {
-        if (!cell.isAlive) {
-            cell = nextCell;
-            nextCell = new Cell(gameGrid.deadGrid);
-            store.dispatch(refreshNextCell(nextCell.cell));
-        }
-        if (cell) {
-            switch (move) {
-                case 'a':
-                    if (isSavedCell) {
-                        let tempCell = savedCell;
-                        savedCell = cell;
-                        cell = tempCell;
-                        savedCell.resetRow();
-                    } else {
-                        gameGrid.wipeActiveGrid();
-                        savedCell = cell;
-                        savedCell.resetRow();
-                        cell = nextCell;
-                        nextCell = new Cell();
-                        isSavedCell = true;
-                        store.dispatch(refreshNextCell(nextCell.cell));
-                    }
-                    store.dispatch(refreshSavedCell(savedCell.cell));
-                    break;
-                case 's':
-                case 'DOWN':
-                    cell.moveDown(gameGrid);
-                    break;
-                case 'd':
-                case 'RIGHT':
-                    cell.moveRight(gameGrid.deadGrid);
-                    break;
-                case 'q':
-                case 'LEFT':
-                    cell.moveLeft(gameGrid.deadGrid);
-                    break;
-                case 'z':
-                case 'ROTATE':
-                    cell.rotate(gameGrid.deadGrid);
-                    break;
-                default:
-            }
-        }
-        if (gameGrid.lost) {
-            store.dispatch(gameLost());
-            lostAnimation(gameGrid.grid);
-        }
-        gameGrid.renderCelltoGrid(cell);
-        if (!cell.isAlive) {
-            if (gameGrid.shouldGridDestruct()) {
-                rowDestruction(gameGrid.getTempGrid(), gameGrid);
-                anim = true;
-            }
-        }
-        store.dispatch(refreshGrid(gameGrid.grid));
-    }
-};
-
-export default game;

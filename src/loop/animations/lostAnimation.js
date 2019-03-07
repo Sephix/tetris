@@ -5,10 +5,9 @@ import {refreshGrid} from "../../actions";
 import {GAME_BLANK, LOOSE} from "../../game/settings";
 
 let sequence = 1;
-export const incrementSequence = () => {
+const incrementSequence = () => {
   sequence += 1;
 };
-
 export const lostAnimation = (gameGrid) =>{
 
     let lastAnim = 0;
@@ -33,11 +32,11 @@ export const lostAnimation = (gameGrid) =>{
         if(sequence){
             if (timestamp - lastAnim > 100){
                 if(sequence === 1){
-                    fillGrid(tempGrid);
+                    fillGrid(tempGrid, incrementSequence);
                     sequence++;
                 }
                 if(sequence === 3){
-                    emptyGrid(tempGrid);
+                    emptyGrid(tempGrid, incrementSequence);
                     sequence++;
                 }
                 if(sequence === 5){

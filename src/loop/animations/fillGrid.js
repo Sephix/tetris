@@ -2,11 +2,10 @@ import {store} from "../../index";
 import { refreshGrid } from "../../actions";
 
 import {HEIGHT, WIDTH} from "../../game/settings";
-import {incrementSequence} from "./lostAnimation";
 
 const cell = "black";
 
-export const fillGrid = (gameGrid) =>{
+export const fillGrid = (gameGrid, seq) =>{
     let tempGrid = gameGrid;
     let row = HEIGHT-1;
     let lastAnim = 0;
@@ -20,7 +19,7 @@ export const fillGrid = (gameGrid) =>{
                 }
                 store.dispatch(refreshGrid(tempGrid));
                 row--;
-                if (row === -1) incrementSequence();
+                if (row === -1) seq();
             }
             requestAnimationFrame(fillGridAnimation);
         }

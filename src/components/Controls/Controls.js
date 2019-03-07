@@ -1,8 +1,11 @@
 import React from 'react'
 
+import './controls.css';
+
 import Button from "./Button"
 
-import game, {paused, reset, start} from "../../loop/index";
+import { game } from "../../loop/actions";
+import { paused, reset, start} from "../../loop/index";
 
 
 const Controls = () => {
@@ -17,13 +20,13 @@ const Controls = () => {
                 </div>
                 <div className="row">
                     <div className="game-btn">
-                        <Button type="single" input="a" action={game}>
+                        <Button id="BA" type="single" input="a" action={game}>
                             A
                         </Button>
                         SAVE
                     </div>
                     <div className="game-btn">
-                        <Button type="single" input="ROTATE" action={game}>
+                        <Button id="BZ" type="single" input="ROTATE" action={game}>
                             Z
                         </Button>
                         ROTATE
@@ -31,13 +34,13 @@ const Controls = () => {
                 </div>
                 <div className="row">
                     <div className="game-btn">
-                        <Button type="repeat" input="q" action={game}>
+                        <Button id="BQ" type="repeat" input="q" action={game}>
                             Q
                         </Button>
                         LEFT
                     </div>
                     <div className="game-btn">
-                        <Button type="repeat" input="d" action={game}>
+                        <Button id="BD" type="repeat" input="d" action={game}>
                             D
                         </Button>
                         RIGHT
@@ -45,8 +48,7 @@ const Controls = () => {
                 </div>
                 <div className="row">
                     <div className="game-btn">
-                        <Button type="repeat" input="s" action={game}>
-
+                        <Button id="BS" type="repeat" input="s" action={game}>
                             S
                         </Button>
                         DOWN

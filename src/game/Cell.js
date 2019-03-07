@@ -71,7 +71,7 @@ class Cell{
     willCollide(deadGrid, row, col){
         if (WIDTH - this.cellWidth < col || col < 0 || row > HEIGHT-1)
             return true;
-        let nbRow = (this.cellHeight-1 > row) ? row : this.cellHeight;
+        let nbRow = (this.cellHeight-1 > row) ? row+1 : this.cellHeight;
         for (let i = 0; i < nbRow; i++){
             for (let j = 0; j < this.cellWidth; j++){
                 if(deadGrid[row - i][col + j] !== BACKGROUND_COLOR &&
@@ -80,7 +80,15 @@ class Cell{
                 }
             }
         }
-
+        if(row === -1) {
+            console.log(nbRow);
+            for (let j = 0; j < this.cellWidth; j++){
+                if(deadGrid[0][col + j] !== BACKGROUND_COLOR &&
+                    this.cell[this.cellHeight-1][j] !== BACKGROUND_COLOR){
+                    return true;
+                }
+            }
+        }
         return false;
     }
 

@@ -2,16 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8f061ef6-cfce-4f34-8935-de24d3bc0489" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/loop/animations/emptyGrid.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/loop/animations/lostAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Controls/controls.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/layout.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loop/actions.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loop/animations/fillInFillOut.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/loop/keybind.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/game/settings.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/settings.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/Grid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/Grid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/CenterGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CenterGrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Controls/Button.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Controls/Button.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Controls/Controls.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Controls/Controls.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/game/Cell.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/game/Cell.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loop/animations/emptyGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/animations/emptyGrid.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loop/animations/fillGrid.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/animations/fillGrid.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loop/animations/lostAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/animations/lostAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/loop/animations/rowDestruction.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/animations/rowDestruction.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/loop/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/loop/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/gameLevelReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/gameLevelReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/gameScoreReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/gameScoreReducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reducers/gridReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducers/gridReducer.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -25,19 +34,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/index.css">
+        <entry file="file://$PROJECT_DIR$/src/components/Controls/controls.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="171" selection-start-line="171" selection-end-line="171" />
+            <state relative-caret-position="1344">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/loop/keybind.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1260">
+              <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+              <folding>
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-140">
+              <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/loop/actions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/loop/animations/lostAnimation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="84">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/game/settings.js">
+        <entry file="file://$PROJECT_DIR$/src/loop/animations/fillInFillOut.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1298">
-              <caret line="59" column="89" selection-start-line="59" selection-start-column="89" selection-end-line="59" selection-end-column="89" />
+            <state relative-caret-position="336">
+              <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+              <folding>
+                <element signature="e#0#41#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -47,8 +113,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="CSS File" />
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -56,6 +122,7 @@
     <findStrings>
       <find>Button</find>
       <find>margin</find>
+      <find>conso</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -76,7 +143,6 @@
         <option value="$PROJECT_DIR$/src/game/Main.js" />
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/keyboardInput.js" />
-        <option value="$PROJECT_DIR$/src/components/Controls/Button.js" />
         <option value="$PROJECT_DIR$/src/reducers/gameStateReducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/savedCellReducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/nextCellReducer.js" />
@@ -87,31 +153,40 @@
         <option value="$PROJECT_DIR$/src/actions/index.js" />
         <option value="$PROJECT_DIR$/src/components/RightInfo.js" />
         <option value="$PROJECT_DIR$/src/components/LeftInfo.js" />
-        <option value="$PROJECT_DIR$/src/components/Layout.js" />
         <option value="$PROJECT_DIR$/public/style.css" />
         <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/assets/Grid.js" />
-        <option value="$PROJECT_DIR$/src/components/Controls/Controls.js" />
-        <option value="$PROJECT_DIR$/src/game/Grid.js" />
-        <option value="$PROJECT_DIR$/src/game/Cell.js" />
-        <option value="$PROJECT_DIR$/src/loop/animations/rowDestruction.js" />
         <option value="$PROJECT_DIR$/src/reducers/gameLevelReducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/gameScoreReducer.js" />
         <option value="$PROJECT_DIR$/src/reducers/gridReducer.js" />
-        <option value="$PROJECT_DIR$/src/components/CenterGrid.js" />
-        <option value="$PROJECT_DIR$/src/loop/index.js" />
-        <option value="$PROJECT_DIR$/src/loop/animations/fillGrid.js" />
-        <option value="$PROJECT_DIR$/src/loop/animations/emptyGrid.js" />
+        <option value="$PROJECT_DIR$/src/loop/animations/rowDestruction.js" />
         <option value="$PROJECT_DIR$/src/loop/animations/lostAnimation.js" />
-        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/loop/animations/fillGrid.js" />
         <option value="$PROJECT_DIR$/src/game/settings.js" />
+        <option value="$PROJECT_DIR$/src/game/Grid.js" />
+        <option value="$PROJECT_DIR$/src/game/Cell.js" />
+        <option value="$PROJECT_DIR$/src/loop/index.js" />
+        <option value="$PROJECT_DIR$/src/loop/animations/emptyGrid.js" />
+        <option value="$PROJECT_DIR$/src/assets/Grid.js" />
+        <option value="$PROJECT_DIR$/src/components/Controls/control.css" />
+        <option value="$PROJECT_DIR$/src/components/centerGrid.css" />
+        <option value="$PROJECT_DIR$/src/assets/grid.css" />
+        <option value="$PROJECT_DIR$/src/components/CenterGrid.js" />
+        <option value="$PROJECT_DIR$/src/components/Layout.js" />
+        <option value="$PROJECT_DIR$/src/index.css" />
+        <option value="$PROJECT_DIR$/src/components/layout.css" />
+        <option value="$PROJECT_DIR$/src/components/Controls/Button.js" />
+        <option value="$PROJECT_DIR$/src/components/Controls/Controls.js" />
+        <option value="$PROJECT_DIR$/src/components/Controls/controls.css" />
+        <option value="$PROJECT_DIR$/src/loop/keybind.js" />
+        <option value="$PROJECT_DIR$/src/loop/actions.js" />
+        <option value="$PROJECT_DIR$/src/loop/animations/fillInFillOut.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="40" />
     <option name="width" value="1920" />
-    <option name="height" value="1040" />
+    <option name="height" value="520" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -122,19 +197,50 @@
         <subPane>
           <expand>
             <path>
-              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="newtetris" type="b2602c69:ProjectViewProjectNode" />
-              <item name="newtetris" type="462c0819:PsiDirectoryNode" />
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="game" type="462c0819:PsiDirectoryNode" />
+              <item name="assets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="Controls" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="loop" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tetris" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tetris" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="loop" type="462c0819:PsiDirectoryNode" />
+              <item name="animations" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -210,6 +316,8 @@
       <workItem from="1551548229050" duration="5229000" />
       <workItem from="1551713672542" duration="55000" />
       <workItem from="1551797489239" duration="3192000" />
+      <workItem from="1551946095577" duration="9530000" />
+      <workItem from="1551962307777" duration="226000" />
     </task>
     <task id="LOCAL-00001" summary="Set up css">
       <created>1550861488820</created>
@@ -334,18 +442,18 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155658000" />
+    <option name="totallyTimeSpent" value="174788000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="32" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="40" width="1920" height="1040" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13389562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.27201784" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -353,7 +461,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32968238" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996369" weight="0.2006689" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996369" visible="true" weight="0.2475356" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003631" side_tool="true" weight="0.32951945" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32968238" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -362,12 +470,12 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13382508" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13389562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32968238" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.27201784" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
@@ -375,7 +483,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32968238" />
-      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996369" weight="0.2006689" />
+      <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.4996369" visible="true" weight="0.2475356" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5003631" side_tool="true" weight="0.32951945" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32968238" />
       <window_info anchor="bottom" id="TypeScript" order="12" />
@@ -456,11 +564,23 @@
           </nodes>
           <notes />
           <edges>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/reducers/index.js">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/redux/index.d.ts#createStore#10714;">
+              <point x="0.0" y="0.0" />
+              <point x="0.0" y="0.0" />
+            </edge>
             <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/components/Layout.js">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/index.css">
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/react/index.js">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -472,19 +592,7 @@
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
-            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/react/index.js">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/react.d.ts">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/node_modules/redux/index.d.ts#createStore#10714;">
-              <point x="0.0" y="0.0" />
-              <point x="0.0" y="0.0" />
-            </edge>
-            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/reducers/index.js">
+            <edge source="$PROJECT_DIR$/src/index.js#Layout#169;C:/Users/michael/WebstormProjects/newtetris/src/index.js#Provider#70;C:/Users/michael/WebstormProjects/newtetris/src/index.js#React#7;C:/Users/michael/WebstormProjects/newtetris/src/index.js#ReactDom#34;C:/Users/michael/WebstormProjects/newtetris/src/index.js#createStore#110;C:/Users/michael/WebstormProjects/newtetris/src/index.js#index.css#139;C:/Users/michael/WebstormProjects/newtetris/src/index.js#reducers#211;" target="$PROJECT_DIR$/src/index.css">
               <point x="0.0" y="0.0" />
               <point x="0.0" y="0.0" />
             </edge>
@@ -501,30 +609,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/assets/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#25#0" expanded="true" />
-            <element signature="e#185#1941#0" />
-            <element signature="e#599#816#0" />
-            <element signature="e#837#1061#0" />
-            <element signature="e#1143#1360#0" />
-            <element signature="e#1381#1599#0" />
-            <element signature="e#1681#1899#0" />
-            <element signature="e#1732#1843#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -536,16 +620,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
           <caret line="65" column="22" selection-start-line="65" selection-start-column="22" selection-end-line="65" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Layout.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -572,44 +646,6 @@
           <caret line="38" column="21" lean-forward="true" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Cell.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="11" column="18" lean-forward="true" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-700">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/loop/animations/rowDestruction.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-          <folding>
-            <element signature="e#163#1334#0" />
-            <element signature="e#382#1129#0" />
           </folding>
         </state>
       </provider>
@@ -673,18 +709,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loop/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1872">
-          <caret line="176" column="9" lean-forward="true" selection-start-line="176" selection-start-column="9" selection-end-line="176" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-            <element signature="n#!!block;n#handleKeyPress#0" />
-            <element signature="n#!!block;n#handleKeyUp#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/reducers/gridReducer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
@@ -695,57 +719,168 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/CenterGrid.js">
+    <entry file="file://$PROJECT_DIR$/src/loop/animations/rowDestruction.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="7" column="36" selection-start-line="7" selection-start-column="36" selection-end-line="7" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="34" lean-forward="true" selection-start-column="34" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loop/animations/emptyGrid.js">
+    <entry file="file://$PROJECT_DIR$/src/game/settings.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="560">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/loop/animations/lostAnimation.js">
+    <entry file="file://$PROJECT_DIR$/src/game/Grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="224">
-          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1764">
+          <caret line="63" column="48" selection-start-line="63" selection-start-column="32" selection-end-line="63" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/loop/animations/fillGrid.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <caret line="21" column="38" lean-forward="true" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
           <folding>
             <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.css">
+    <entry file="file://$PROJECT_DIR$/src/game/Cell.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="171" selection-start-line="171" selection-end-line="171" />
+        <state relative-caret-position="387">
+          <caret line="82" column="21" selection-start-line="82" selection-start-column="21" selection-end-line="82" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/game/settings.js">
+    <entry file="file://$PROJECT_DIR$/src/loop/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1298">
-          <caret line="59" column="89" selection-start-line="59" selection-start-column="89" selection-end-line="59" selection-end-column="89" />
+        <state relative-caret-position="-300">
+          <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loop/animations/emptyGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/Grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/centerGrid.css" />
+    <entry file="file://$PROJECT_DIR$/src/components/Layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="56">
+          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/CenterGrid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="28">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/assets/grid.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="16" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/layout.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="77" column="1" selection-start-line="77" selection-start-column="1" selection-end-line="77" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Controls/controls.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1344">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="16" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loop/keybind.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Controls/Controls.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="52" column="33" selection-start-line="52" selection-start-column="33" selection-end-line="52" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Controls/Button.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140">
+          <caret line="7" column="50" selection-start-line="7" selection-start-column="50" selection-end-line="7" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loop/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="20" column="75" selection-start-line="20" selection-start-column="75" selection-end-line="20" selection-end-column="75" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loop/animations/lostAnimation.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/loop/animations/fillInFillOut.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

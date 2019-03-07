@@ -1,5 +1,7 @@
 import React  from 'react';
 
+import './grid.css';
+
 const Grid = ({grid, id, className}) => {
     return(
         <div className={className}>
