@@ -13,7 +13,7 @@ export const fillInFillOut = (gameGrid) =>{
         let lastAnim = 0;
         let tempGrid = gameGrid.map(row => row.map(square => square));
         sequence = 1;
-        
+
         const fillInFillOutAnim = (timestamp) =>{
             if(sequence){
                 setAnim(true);
